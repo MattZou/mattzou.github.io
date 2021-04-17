@@ -49,6 +49,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
 highlight:
   enable: false
   line_number: true
@@ -123,3 +124,26 @@ Plugins: hexo-generator-sitemap
 #sitemap
 sitemap:
   path: sitemap.xml
+
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: false
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  headerIds: true
+  lazyload: false
+  prependRoot: false
+  postAsset: false
+  external_link:
+    enable: false
+    exclude: []
+    nofollow: false
+  disableNunjucks: false
+  descriptionLists: true
