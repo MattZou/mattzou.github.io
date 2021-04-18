@@ -1,2 +1,1 @@
-*.yml filter=_configID
 *.yml filter=_configCode
