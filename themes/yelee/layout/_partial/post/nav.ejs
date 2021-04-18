@@ -1,7 +1,7 @@
 <% if ((post.original != false && !is_page() && theme.copyright) || post.original){ %>
     <div class="copyright">
         <p><span><%= __('copyright_info.title') %>:</span><a href="<%- url_for(post.path) %>"><%= post.title %></a></p>
-        <p><span><%= __('copyright_info.author') %>:</span><a href="/" title="<%= __('tooltip.back2home') %>"><%=theme.author%></a></p>
+        <p><span><%= __('copyright_info.author') %>:</span><a href="/" title="<%= __('tooltip.back2home') %>"><%=post.author%></a></p>
         <p><span><%= __('copyright_info.date') %>:</span><%= post.date.format("YYYY-MM-DD, HH:mm:ss") %></p>
         <p><span><%= __('copyright_info.updated') %>:</span><%= post.updated.format("YYYY-MM-DD, HH:mm:ss") %></p>
         <p>
@@ -10,7 +10,7 @@
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span><%= __('copyright_info.license') %>:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"<%= __('copyright_info.cc') %>"</a> <%= __('copyright_info.notice') %>
+            <span><%= __('copyright_info.license') %>:</span><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
         </p>
     </div>
 <% } %>
