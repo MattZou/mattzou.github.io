@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ggplot2总结
+author: MattZou
 date: 2021/04/15
 updated: 2021/04/17
 categories: [软件使用]
