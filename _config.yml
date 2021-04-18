@@ -49,20 +49,13 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-
 highlight:
-  enable: false
+  enable: true
+  auto_detect: false
   line_number: true
-  auto_detect: true
-  tab_replace:
-
-# prism
-# https://prismjs.com/#languages-list
-prism_plugin:
-   mode: 'preprocess'   # realtime/preprocess
-   theme: 'a11y-dark'   # https://github.com/PrismJS/prism-themes#available-themes
-   line_number: true    # default false
-   custom_css:          # optional
+  tab_replace: '  '
+  wrap: true
+  hljs: false
 
 # Category & Tag
 default_category: uncategorized
@@ -124,26 +117,3 @@ Plugins: hexo-generator-sitemap
 #sitemap
 sitemap:
   path: sitemap.xml
-
-marked:
-  gfm: true
-  pedantic: false
-  breaks: true
-  smartLists: true
-  smartypants: true
-  quotes: '“”‘’'
-  modifyAnchors: 0
-  anchorAlias: false
-  autolink: true
-  mangle: true
-  sanitizeUrl: false
-  headerIds: true
-  lazyload: false
-  prependRoot: false
-  postAsset: false
-  external_link:
-    enable: false
-    exclude: []
-    nofollow: false
-  disableNunjucks: false
-  descriptionLists: true

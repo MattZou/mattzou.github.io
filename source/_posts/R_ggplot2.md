@@ -19,7 +19,7 @@ description:
 
 ## How to use ggplot2
 ### 安装
-```r
+``` r
 install.packages("tidyverse")
 ```
 搭配[Rstudio](https://www.rstudio.com/products/rstudio/)食用更佳。
