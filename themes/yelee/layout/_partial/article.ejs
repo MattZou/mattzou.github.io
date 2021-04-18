@@ -77,6 +77,8 @@
           }) %>
     <% } else if (theme.gitalk.on) { %>
         <%- partial('comments/gitalk') %>
+    <% } else if (theme.utterance.enable) { %>
+      <%- partial('comments/utteranc') %>
     <% } %>
 <% } %>
 
