@@ -282,6 +282,14 @@ progressBar:
   type: "minimal"  # Keep Quotes | 保留引号避免出错
   color: blue
 
+gitalk:
+  on: false
+  clientID: 'dbcb411f7588b3a9f7a3'
+  clientSecret: ''
+  repo: 'mattzou.github.io' # 仓库地址
+  owner: 'MattZou' # 拥有者
+  admin: ['MattZou'] # admin 用户
+
 #utteranc评论： https://utteranc.es (参数配置详见主页)
 utterance:
   enable: true
