@@ -184,7 +184,7 @@ friends:
 #friends: false
 
 #是否开启“关于我”。
-aboutme: true
+aboutme: false
 #aboutme: false
 
 # Open link in a new tab | 是否在新窗口打开链接
