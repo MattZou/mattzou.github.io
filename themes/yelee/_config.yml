@@ -269,7 +269,7 @@ visit_counter:
 
 # GitHub Repo Widget
 # https://github.com/hustcc/GitHub-Repo-Widget.js
-github_widget: true
+github_widget: false
 
 # Progress Bar | 页面加载进度条
 # Demo: http://github.hubspot.com/pace/docs/welcome/
@@ -296,6 +296,11 @@ utterance:
   repo: 'MattZou/mattzou.github.io'     #仓库名字,格式：你的用户ID/仓库名称，如：blog/utterance_repo
   issue_term: 'title'            #映射配置
   theme: 'github-light'          #主题
+
+word_count:
+  enable: true
+  # 只在文章详情显示(不在首页显示)
+  only_article_visit: true
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
