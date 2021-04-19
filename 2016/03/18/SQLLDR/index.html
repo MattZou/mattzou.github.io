@@ -1,0 +1,544 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ico/favicon.jpg">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="
+来了一大批单个大小动辄7G的文本文件，导入数据表中，怎么办!!!!尝试用PL/SQL Developer中的文本导入器，结果====卡死=====很久之后====卡死
+">
+  <meta name="author" content="MattZou">
+  <meta name="keywords" content="">
+  
+  <title>Oracle SQL*Loader 应用 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/tomorrow-night-eighties.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.9a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Oracle SQL*Loader 应用">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-03-18 12:31" pubdate>
+        2016年3月18日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Oracle SQL*Loader 应用</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>来了一大批单个大小动辄7G的文本文件，导入数据表中，怎么办!!!!尝试用<code>PL/SQL Developer</code>中的文本导入器，结果====<strong>卡死</strong>=====很久之后====<strong>卡死</strong></p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>Oracle常用的表数据迁移方法有以下几种：</p>
+<ol>
+<li><p>A表导出包含 <code>insert</code> 的sql，逐条插入B表中</p>
+</li>
+<li><p>建立数据库间的 dblink，然后用 <code>create table B as select * from A@dblink where </code>，或 <code>insert into B select * from A@dblink where </code></p>
+</li>
+<li><p><code>expdp</code> A 表，再 <code>impdp</code> 到 B 表</p>
+</li>
+<li><p>文本数据采用<strong>SQL*Loader</strong> (sqlldr) </p>
+<p> 第1、2种方式可用以下方式优化导入效率：</p>
+ <figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> B nologging;  <br><span class="hljs-keyword">insert</span> <span class="hljs-comment">/* +APPEND */</span> <span class="hljs-keyword">into</span> B(col1,col2) <span class="hljs-keyword">values</span>(val1,val2);  <br><span class="hljs-keyword">insert</span> <span class="hljs-comment">/* +APPEND */</span> <span class="hljs-keyword">into</span> B <span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> A<span class="hljs-variable">@dblink</span> <span class="hljs-keyword">where</span>  ;  <br></code></pre></div></td></tr></table></figure>
+<h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2></li>
+<li><p><strong>SQL*Loader</strong> 使用过程中需要创建一个控制文件<code>.ctl</code>，示例如下：</p>
+</li>
+</ol>
+  <figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">OPTIONS (<span class="hljs-keyword">rows</span><span class="hljs-operator">=</span><span class="hljs-number">100000</span>)  <span class="hljs-comment">/*定义sqlldr部分参数*/</span><br>load data<br>infile<span class="hljs-string">&#x27;F:\2014-10-31.txt&#x27;</span>	<span class="hljs-comment">/*指定数据文件*/</span><br><span class="hljs-keyword">insert</span><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">在操作类型 insert 位置可选一下值：</span><br><span class="hljs-comment">1) insert   --为缺省方式，在数据装载开始时要求表为空</span><br><span class="hljs-comment">2) append   --在表中追加新记录</span><br><span class="hljs-comment">3) replace  --删除旧记录(用 delete from table 语句)，替换成新装载的记录</span><br><span class="hljs-comment">4) truncate --删除旧记录(用 truncate table 语句)，替换成新装载的记录</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">into</span> <span class="hljs-keyword">table</span> user_table<br>fields terminated <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;,&#x27;</span>	<span class="hljs-comment">/*指定字段分隔符*/</span><br>Optionally enclosed <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;&quot;&#x27;</span> 	<span class="hljs-comment">/*可选。 数据中每个字段用 &#x27;&quot;&#x27; 框起，如果字段中有 &quot;,&quot; 分隔符，可避免将字段截断*/</span><br>(<br>PLATE,<br>ACROSS_TIME <span class="hljs-type">DATE</span>&quot;YYYY-MM-DD HH24:MI:SS&quot;,  <span class="hljs-comment">/*指定接受日期的格式，相当用 to_date() 函数转换*/</span><br>VEH_SPD NUMBER	<span class="hljs-comment">/*字段指定类型，默认是 CHARACTER 类型*/</span><br>)<br></code></pre></div></td></tr></table></figure>
+
+<ol start="2">
+<li>然后再执行<code>sqlldr</code>命令，</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">sqlldr userid<span class="hljs-variable">@service</span> control<span class="hljs-operator">=</span>user.ctl<br></code></pre></div></td></tr></table></figure>
+
+<p> 命令包含以下<strong>关键字</strong>：</p>
+<figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">    userid <span class="hljs-comment">-- ORACLE 用户名/口令</span><br>   control <span class="hljs-comment">-- 控制文件名</span><br>       log <span class="hljs-comment">-- 日志文件名</span><br>       bad <span class="hljs-comment">-- 错误文件名</span><br>      data <span class="hljs-comment">-- 数据文件名</span><br>   discard <span class="hljs-comment">-- 废弃文件名</span><br>discardmax <span class="hljs-comment">-- 允许废弃的文件的数目         (全部默认)</span><br>      <span class="hljs-keyword">skip</span> <span class="hljs-comment">-- 要跳过的逻辑记录的数目  (默认 0)</span><br>      load <span class="hljs-comment">-- 要加载的逻辑记录的数目  (全部默认)</span><br>    errors <span class="hljs-comment">-- 允许的错误的数目         (默认 50)</span><br>      <span class="hljs-keyword">rows</span> <span class="hljs-comment">-- 常规路径绑定数组中或直接路径保存数据间的行数	(默认: 常规路径 64, 所有直接路径)</span><br>  bindsize <span class="hljs-comment">-- 常规路径绑定数组的大小 (以字节计)  (默认 256000)</span><br>    silent <span class="hljs-comment">-- 运行过程中隐藏消息 (标题,反馈,错误,废弃,分区)</span><br>    direct <span class="hljs-comment">-- 使用直接路径                     (默认 FALSE)</span><br>   parfile <span class="hljs-comment">-- 参数文件: 包含参数说明的文件的名称</span><br>  parallel <span class="hljs-comment">-- 执行并行加载                    (默认 FALSE)</span><br>      file <span class="hljs-comment">-- 要从以下对象中分配区的文件</span><br>skip_unusable_indexes <span class="hljs-comment">-- 不允许/允许使用无用的索引或索引分区  (默认 FALSE)</span><br>skip_index_maintenance <span class="hljs-comment">-- 没有维护索引, 将受到影响的索引标记为无用  (默认 FALSE)</span><br>commit_discontinued <span class="hljs-comment">-- 提交加载中断时已加载的行  (默认 FALSE)</span><br>  readsize <span class="hljs-comment">-- 读取缓冲区的大小               (默认 1048576)</span><br>external_table <span class="hljs-comment">-- 使用外部表进行加载; NOT_USED, GENERATE_ONLY, EXECUTE  (默认NOT_USED)</span><br>columnarrayrows <span class="hljs-comment">-- 直接路径列数组的行数  (默认 5000)</span><br>streamsize <span class="hljs-comment">-- 直接路径流缓冲区的大小 (以字节计)  (默认 256000)</span><br>multithreading <span class="hljs-comment">-- 在直接路径中使用多线程</span><br> resumable <span class="hljs-comment">-- 启用或禁用当前的可恢复会话  (默认 FALSE)</span><br>resumable_name <span class="hljs-comment">-- 有助于标识可恢复语句的文本字符串</span><br>resumable_timeout <span class="hljs-comment">-- RESUMABLE 的等待时间 (以秒计)  (默认 7200)</span><br>date_cache <span class="hljs-comment">-- 日期转换高速缓存的大小 (以条目计)  (默认 1000)</span><br>no_index_errors <span class="hljs-comment">-- 出现任何索引错误时中止加载  (默认 FALSE)</span><br></code></pre></div></td></tr></table></figure>
+<blockquote>
+<p>以上部分参数可以在控制文件中以<code>OPTIONS()</code>来定义</p>
+</blockquote>
+<h2 id="性能提升"><a href="#性能提升" class="headerlink" title="性能提升"></a>性能提升</h2><ol>
+<li><strong>Direct</strong>导入可以跳过数据库的相关逻辑<code>(DIRECT=TRUE)</code>，而直接将数据导入到数据文件中，可以提高导入数据的性能。当然，在很多情况下，不能使用此参数(如果主键重复的话会使索引的状态变成<strong>UNUSABLE</strong>)</li>
+<li>使用 <code>ROWS=n</code> 限定<code>commit</code>频率</li>
+<li>使用并行载入，只在** Direct path loads<strong>模式下可用，这个选项可让</strong>SQL*Loader**同时执行多个任务。<figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs plsql">sqlldr control=first.ctl  parallel=true direct=true	<br>sqlldr control=second.ctl parallel=true direct=true<br></code></pre></div></td></tr></table></figure></li>
+<li> 使用<code>unrecoverable</code>，此选项禁止<code>redo</code>日志的产生，只在** Direct path loads**模式可用。  </li>
+</ol>
+<ul>
+<li>效果<br>  <img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/sql/sqlldr.JPG" srcset="/img/loading.gif" lazyload alt="效果"></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a target="_blank" rel="noopener" href="http://www.cnblogs.com/benio/archive/2011/10/14/2211171.html">SQL*Loader详解</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.remote-dba.net/teas_rem_util18.htm">Maximizing SQL*Loader Performance</a></li>
+</ol>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Oracle/">Oracle</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/SQL-Loader/">SQL*Loader</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ico/cc.png" srcset="/img/loading.gif" lazyload /></a>本作品采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/09/26/%E2%80%9C%E5%85%AC%E7%9B%8A%E4%BA%91%E5%9B%BE%E2%80%9D%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%9B%E6%96%B0%E5%A4%A7%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">“公益云图”数据可视化创新大赛技术汇总</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/">
+                        <span class="hidden-mobile">ArcGIS要素映射关系建立</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

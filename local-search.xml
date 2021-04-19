@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>ggplot2总结</title>
+    <link href="/2021/04/15/R_ggplot2/"/>
+    <url>/2021/04/15/R_ggplot2/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>ggplot2使用总结，各种坑和技巧</p></blockquote><span id="more"></span><h2 id="What-is-ggplot2"><a href="#What-is-ggplot2" class="headerlink" title="What is ggplot2"></a>What is ggplot2</h2><p><a href="https://ggplot2.tidyverse.org/index.html"><strong>ggplot2</strong></a>是<a href="https://www.tidyverse.org/">tidyverse</a>家族中进行数据可视化的核心package<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/tidyverse.jpg/pic"></p><h2 id="How-to-use-ggplot2"><a href="#How-to-use-ggplot2" class="headerlink" title="How to use ggplot2"></a>How to use ggplot2</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight r"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs r">install.packages(<span class="hljs-string">&quot;tidyverse&quot;</span>)<br></code></pre></div></td></tr></table></figure><p>搭配<a href="https://www.rstudio.com/products/rstudio/">Rstudio</a>食用更佳。</p><h3 id="功能速览"><a href="#功能速览" class="headerlink" title="功能速览"></a>功能速览</h3><ol><li>Rstudio提供一系列的<a href="https://www.rstudio.com/resources/cheatsheets/">Cheatsheets</a>用于快速入门及核心功能速查，ggplot2部分可直接<a href="https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf">下载</a>。</li><li>各函数详细参数及示例参见<a href="https://ggplot2.tidyverse.org/reference/index.html">Reference</a>。</li><li>ggplot2还支持<a href="https://exts.ggplot2.tidyverse.org/gallery/">拓展包</a>，针对特殊功能，如<a href="https://gganimate.com/">动态图片</a>、<a href="https://github.com/jrnold/ggthemes">主题设定</a>、<a href="https://github.com/aphalo/ggpmisc/">图表注释</a>、<a href="%5Bggstatsplot%5D(https://github.com/IndrajeetPatil/ggstatsplot)">增强型统计图表</a>等，拓展包提供了更好的封装，简化使用。</li></ol><h3 id="可视化理念"><a href="#可视化理念" class="headerlink" title="可视化理念"></a>可视化理念</h3><ul><li><strong>作者意图</strong><blockquote><p>All plots are composed of the <strong>data</strong>, the information you want to visualise, and a <strong>mapping</strong>, the description of how the data’s variables are mapped to aesthetic attributes.<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="https://ggplot2-book.org/index.html">[1]</span></a></sup><br><a href="http://hadley.nz/">Hadley Wickham</a></p></blockquote></li><li><strong>我的理解</strong><br>gg:  <strong>Grammar of Graphics</strong>，ggplot2，把图分为数据，几何图形，图形属性及部分，把图的各个部分定义为组件形式，组件实现数据与几何对象的映射，通过图形属性定义组件之间的组合形式进行绘图。<h2 id="Tricks-and-Bugs"><a href="#Tricks-and-Bugs" class="headerlink" title="Tricks and Bugs"></a>Tricks and Bugs</h2></li></ul><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://ggplot2-book.org/index.html">https://ggplot2-book.org/index.html</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>R</tag>
+      
+      <tag>ggplot2</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Mendeley文献引用格式设置</title>
+    <link href="/2021/04/03/Mendeley/"/>
+    <url>/2021/04/03/Mendeley/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近使用Mendeley，研究了一下引文格式调整方法和技巧。</p></blockquote><span id="more"></span><h2 id="Mendeley文献引用格式设置"><a href="#Mendeley文献引用格式设置" class="headerlink" title="Mendeley文献引用格式设置"></a>Mendeley文献引用格式设置</h2><p><strong>注意：仅适用于Windows环境，当前测试环境：系统版本Win10 21313.1000，软件版本1.19.8</strong><br>Mendeley引文格式主要通过在线方式下载更新，对格式的自定义可通过其提供的CSL在线编辑器进行，同时Mendeley也支持本地编译好的CSL文件配置。</p><h3 id="引文格式配置文件"><a href="#引文格式配置文件" class="headerlink" title="引文格式配置文件"></a>引文格式配置文件</h3><p><a href="http://citationstyles.org/">Citation Style Language</a><br>CSL用于配置引文格式，Zotero、Mendeley等软件支持此方式定义引文格式。</p><h3 id="Mendeley中设置常用期刊引文方式"><a href="#Mendeley中设置常用期刊引文方式" class="headerlink" title="Mendeley中设置常用期刊引文方式"></a>Mendeley中设置常用期刊引文方式</h3><ol><li>点击菜单栏<code>View</code>-<code>Citation Style</code>-<code>More Styles...</code></li><li>弹出窗口中选择<code>Get More Styles</code><br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/Mendeley_install.jpg/pic" alt="安装"></li><li>搜索对应期刊下载安装即可</li></ol><h3 id="Mendeley中编辑引文格式"><a href="#Mendeley中编辑引文格式" class="headerlink" title="Mendeley中编辑引文格式"></a>Mendeley中编辑引文格式</h3><ol><li>在弹出窗口中查看已安装引文格式，右键<code>Edit Style</code>，跳转进入浏览器进行在线编辑<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/Mendeley_edit.jpg/pic" alt="编辑"></li><li>可视化编辑区域<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/Mendeley_online_edit.jpg/pic" alt="在线编辑"></li></ol><ul><li>左侧树结构，可分别对全局设置、文内引用、参考书目、引文组件进行设置</li><li>鼠标悬停于右侧示例上，左侧树会高亮显这块引文内容涉及的配置项目</li><li><strong>STYLE INFO</strong>中<code>Global Formatting Options</code>，<code>default-locale</code>项目可调整切换‘等‘与’<em>et al</em>‘，参数分别为’zh-CN‘、’en-US‘</li><li>文内引文(<strong>Inline Citations</strong>)和参考书目(<strong>Bibliography</strong>)<ul><li>由<code>Group</code>结构构成，<code>Group</code>内成员由<code>Macros</code>定义</li><li>点击根节点，其中<code>et-al-min</code>项目设置几个作者后出现’等‘</li><li><code>Sort</code>节点，定义文献排列顺序，按作者、时间等升降序规则，可定义多个规则，优先级由上至下</li></ul></li></ul><h3 id="本地CSL文件配置及使用"><a href="#本地CSL文件配置及使用" class="headerlink" title="本地CSL文件配置及使用"></a>本地CSL文件配置及使用</h3><ul><li>如果要使用[GB-T-7714] 相关CSL，可从以下repo下载<a href="https://github.com/redleafnew/Chinese-STD-GB-T-7714-related-csl">Chinese-STD-GB-T-7714-related-csl</a></li><li>Mendeley将所有CSL文件存储在如下路径<blockquote><p>C:\Users\{User}\AppData\Local\Mendeley Ltd\Mendeley Desktop\citationStyles-1.0</p></blockquote></li><li>将下载后的CSL移动到此目录</li><li>CSL文件类似XML样式，可以直接更改其中配置<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/Mendeley_CSL.jpg/pic" alt="本地配置"></li><li>文件修改保存后，在<code>More Styles...</code>窗口中已安装可见。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mendeley</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GEE常用卫星产品载入及显示</title>
+    <link href="/2019/11/30/GEE%E7%AC%94%E8%AE%B0_%E4%BA%A7%E5%93%81%E6%98%BE%E7%A4%BA/"/>
+    <url>/2019/11/30/GEE%E7%AC%94%E8%AE%B0_%E4%BA%A7%E5%93%81%E6%98%BE%E7%A4%BA/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>在GEE平台code editor里显示卫星产品</p></blockquote><span id="more"></span><p>在GEE中，部分资产可以通过<a href="https://explorer.earthengine.google.com/#workspace">Explorer</a>进行预览，多数情况下下在<a href="https://code.earthengine.google.com/">Editor</a>里查看更为方便。</p><h2 id="Landsat-8"><a href="#Landsat-8" class="headerlink" title="Landsat 8"></a>Landsat 8</h2><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-keyword">var</span> l8 = ee.ImageCollection(<span class="hljs-string">&quot;LANDSAT/LC08/C01/T1&quot;</span>),<br>    roi = <br>    ee.Geometry.Polygon(<br>        [[[<span class="hljs-number">119.23097080607909</span>, <span class="hljs-number">36.93905749319195</span>],<br>          [<span class="hljs-number">119.23097080607909</span>, <span class="hljs-number">32.21992180906591</span>],<br>          [<span class="hljs-number">124.09242100139159</span>, <span class="hljs-number">32.21992180906591</span>],<br>          [<span class="hljs-number">124.09242100139159</span>, <span class="hljs-number">36.93905749319195</span>]]], <span class="hljs-literal">null</span>, <span class="hljs-literal">false</span>),<br><br><span class="hljs-keyword">var</span> Data_Collection = l8.filterDate(<span class="hljs-string">&#x27;2016-05-01&#x27;</span>,<span class="hljs-string">&#x27;2016-08-30&#x27;</span>);<br><span class="hljs-comment">//选择云量最少的影像组合</span><br><span class="hljs-keyword">var</span> Select_Collection=  ee.Algorithms.Landsat.simpleComposite(Data_Collection).clip(roi)<br><span class="hljs-comment">//载入图层</span><br><span class="hljs-built_in">Map</span>.addLayer(Select_Collection,&#123;<span class="hljs-attr">bands</span>: [<span class="hljs-string">&quot;B4&quot;</span>,<span class="hljs-string">&quot;B3&quot;</span>,<span class="hljs-string">&quot;B2&quot;</span>],<span class="hljs-attr">gamma</span>: <span class="hljs-number">1.5</span>,<span class="hljs-attr">max</span>: <span class="hljs-number">108</span>,<span class="hljs-attr">min</span>: <span class="hljs-number">15</span>&#125;,<span class="hljs-string">&#x27;True-Color&#x27;</span>);<br><span class="hljs-built_in">Map</span>.centerObject(roi, <span class="hljs-number">9</span>); <br></code></pre></div></td></tr></table></figure><h2 id="MODIS"><a href="#MODIS" class="headerlink" title="MODIS"></a>MODIS</h2><figure class="highlight js"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs js"><span class="hljs-comment">// 选择数据源，并定义范围 roi</span><br><span class="hljs-keyword">var</span> mod500 = ee.ImageCollection(<span class="hljs-string">&quot;MODIS/006/MYD09A1&quot;</span>),<br>    roi = <br>    ee.Geometry.Polygon(<br>        [[[<span class="hljs-number">118.96562188688824</span>, <span class="hljs-number">36.08745610383932</span>],<br>          [<span class="hljs-number">118.96562188688824</span>, <span class="hljs-number">34.000935416392934</span>],<br>          [<span class="hljs-number">121.29472344938824</span>, <span class="hljs-number">34.000935416392934</span>],<br>          [<span class="hljs-number">121.29472344938824</span>, <span class="hljs-number">36.08745610383932</span>]]], <span class="hljs-literal">null</span>, <span class="hljs-literal">false</span>);<br><br><span class="hljs-keyword">var</span> image_mod500 = ee.Image(<br>     mod500.filterDate(<span class="hljs-string">&#x27;2016-05-01&#x27;</span>,<span class="hljs-string">&#x27;2016-08-30&#x27;</span>d)<br>    .first()<br>).clip(roi).toFloat();<br><br><span class="hljs-comment">// Select the QA band</span><br><span class="hljs-keyword">var</span> QA = image_mod500.select(<span class="hljs-string">&#x27;StateQA&#x27;</span>);<br><span class="hljs-comment">// Get the cloud_state bits and find cloudy areas.</span><br><span class="hljs-keyword">var</span> cloud = getQABits(QA, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;cloud_state&#x27;</span>)<br>                    .expression(<span class="hljs-string">&quot;b(0) == 1 || b(0) == 2&quot;</span>);<br><span class="hljs-comment">// Create a mask that filters out  cloudy areas.</span><br><span class="hljs-keyword">var</span> mask = cloud.not();<br><br><span class="hljs-comment">//定义显示参数</span><br><span class="hljs-keyword">var</span> visParams_color = &#123;<span class="hljs-attr">bands</span>:[<span class="hljs-string">&#x27;sur_refl_b01&#x27;</span>,<span class="hljs-string">&#x27;sur_refl_b04&#x27;</span>,<span class="hljs-string">&#x27;sur_refl_b03&#x27;</span>],<span class="hljs-attr">min</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">max</span>:<span class="hljs-number">3000</span>,<span class="hljs-attr">gamma</span>:<span class="hljs-number">1.3</span>&#125;;<br><span class="hljs-comment">//载入图层</span><br><span class="hljs-built_in">Map</span>.addLayer(image_mod500.updatemask(mask), visParams_color, <span class="hljs-string">&#x27;mod500_color&#x27;</span>);<br></code></pre></div></td></tr></table></figure><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="https://www.zhihu.com/people/li-shi-wei-36">知乎用户 <strong>无形的风</strong></a></li></ol><ol start="2"><li><a href="https://www.zhihu.com/column/c_123993183">知乎专栏</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GEE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Google Earth Engine 教学视频笔记</title>
+    <link href="/2019/11/30/GEE%E7%AC%94%E8%AE%B0/"/>
+    <url>/2019/11/30/GEE%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>B站上GEE基础视频要点笔记</p></blockquote><span id="more"></span><h2 id="基础数据类型："><a href="#基础数据类型：" class="headerlink" title="基础数据类型："></a>基础数据类型：</h2><h3 id="String、Number"><a href="#String、Number" class="headerlink" title="String、Number"></a>String、Number</h3><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee1.png/pic"></p><ul><li>基础运算：拼接、替换、切分</li><li>位运算用于云层处理<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee2.png/pic"><h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee3.png/pic"><h3 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h3><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee4.png/pic"></li><li>Add 添加内容，Insert 可以指定位置，map操作比较重要，循环使用</li></ul><h2 id="空间数据对象："><a href="#空间数据对象：" class="headerlink" title="空间数据对象："></a>空间数据对象：</h2><h3 id="Geometry"><a href="#Geometry" class="headerlink" title="Geometry"></a>Geometry</h3><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee5.png/pic"></p><ul><li>实现空间坐标变换，在<a href="https://epsg.io/">epsg</a>网站查找epsg代码填入参数</li><li><code>Geometry.distance()</code>  用于测算最近两点之间的距离<h3 id="Feature"><a href="#Feature" class="headerlink" title="Feature"></a>Feature</h3><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee6.png/pic"></li><li><code>Feature.Area()</code> 求面积<h3 id="Feature-Collection"><a href="#Feature-Collection" class="headerlink" title="Feature Collection"></a>Feature Collection</h3></li><li> 相当于arcgis shp编辑<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee7.png/pic"></li><li> reduceToImage 矢量转栅格<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee8.png/pic"></li><li> toLIst 变成列表元素<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee9.png/pic"><h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3></li><li>Mask  掩膜操作  类似裁剪，但不真实删除元素<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee10.png/pic"></li><li> <code>Clip(geometry)</code>  裁剪操作</li><li><code>Select(‘bands’)</code>  波段名称选择   slice()  按波段index选择</li><li><code>Addbands()</code> 加波段</li><li><code>Reproject()</code>  epsg:3857 常用网络地图坐标代号</li><li>Rgb hsv 转换</li><li><code>where()</code>重新赋值  对小于4000的重赋值为0  可以剔除某些内容<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee11.png/pic"></li><li>数值判断，值域截取<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee12.png/pic"></li><li>自定义函数，计算NDVI时可用<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee13.png/pic"></li><li><code>Image.derivative()</code>高程进行x， y 微分 求坡度</li><li>纹理提取<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee14.png/pic"></li><li>临域操作，聚合替换<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee15.png/pic"><h3 id="Image-Collection"><a href="#Image-Collection" class="headerlink" title="Image Collection"></a>Image Collection</h3><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee16.png/pic"></li><li><code>Filter</code> 边界、时间段、数据属性筛选<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee17.png/pic"></li><li><code>mosaic()</code>实现多图叠加，将collection变一张image，重叠位置规则：后面取代前面<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee18.png/pic"></li><li><code>Select</code> 波段筛选并重命名，只能对同源数据操作<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee19.png/pic"></li><li>逻辑判断，Or 至少一次，and 多次<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee20.png/pic"></li><li> <code>unmixing</code>解决同物异谱或同谱异物<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee21.png/pic"></li></ul><h2 id="对象操作"><a href="#对象操作" class="headerlink" title="对象操作"></a>对象操作</h2><h3 id="Dates"><a href="#Dates" class="headerlink" title="Dates"></a>Dates</h3><ul><li>时间基本操作<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee22.png/pic"></li><li>时间表示方法<br>使用<a href="https://www.unixtimestamp.com/"><code>Unix timestamp</code></a>表示<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee23.png/pic"></li><li>时间段<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee24.png/pic"></li><li>时间段合并union<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee25.png/pic"></li></ul><h3 id="Filters"><a href="#Filters" class="headerlink" title="Filters"></a>Filters</h3><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee26.png/pic"></p><ul><li>筛选器操作步骤：<ol><li>获取集合</li><li>创建筛选器  f = Filter.xxxx()</li><li>对集合执行筛选器 collections.filter(f)</li></ol></li><li>内容筛选与获取<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee27.png/pic"></li><li>日期筛选<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee28.png/pic"></li><li>组合筛选<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee29.png/pic"><h3 id="Joins"><a href="#Joins" class="headerlink" title="Joins"></a>Joins</h3><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee30.png/pic"></li><li>左连接，定义筛选器筛选<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee31.png/pic"></li><li>影像产品结合<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee32.png/pic"></li><li>saveAll 只链接属性，类似ArcGIS join中字段连接</li><li>saveBest 参见guide<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee33.png/pic"></li></ul><h3 id="Reducers"><a href="#Reducers" class="headerlink" title="Reducers"></a>Reducers</h3><ul><li>主要用于栅格数据分析<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee34.png/pic"></li><li>计数，countEvery 可以计算NA<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee35.png/pic"></li><li>Reducers  max读取波段取最大， 或者多波段中位值<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee36.png/pic"><h3 id="Kernel"><a href="#Kernel" class="headerlink" title="Kernel"></a>Kernel</h3></li><li>对某一个栅格周围元素进行操作<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee37.png/pic"><br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee38.png/pic"></li><li> 对象识别与边界提取<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee39.png/pic"><br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/gee40.png/pic"></li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="https://www.bilibili.com/video/BV1Sb411p7TQ">遥感大数据平台 Google Earth Engine 教学视频</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GEE</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ArcGIS上下角标</title>
+    <link href="/2019/07/07/ArcGIS_%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/"/>
+    <url>/2019/07/07/ArcGIS_%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/</url>
+    
+    <content type="html"><![CDATA[<p>绘制专题图时，Legend或Title部分存在上下标。</p><span id="more"></span><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>ArcGIS标注系统支持类html标签，直接在文本设置中填入对应角标即可。<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/Arcgis_%E8%A7%92%E6%A0%87.jpg/pic" alt="上下标"></p><h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p>其他受支持的标签如下</p><table><thead>  <tr>    <th>元素描述</th>    <th>起始标签</th>    <th>结束标签</th>    <th>有效的属性值</th>    <th>备注</th>  </tr></thead><tbody>  <tr>    <td>字体名称和/或字号</td>    <td>&lt;FNT&gt;</td>    <td>&lt;/FNT&gt;</td>    <td>name = {TrueType font} size = {1} scale = {1-}</td>    <td>设置名称、大小和比例，或全部设置。</td>  </tr>  <tr>    <td>颜色(RGB)</td>    <td>&lt;CLR&gt;</td>    <td>&lt;/CLR&gt;</td>    <td>red, green, blue = {0-255}</td>    <td>缺失的颜色属性假定为 0</td>  </tr>  <tr>    <td>颜色 (CMYK)</td>    <td>&lt;CLR&gt;</td>    <td>&lt;/CLR&gt;</td>    <td>cyan, magenta, yellow, black = {0-100}</td>    <td>缺失的颜色属性假定为 0</td>  </tr>  <tr>    <td>粗体</td>    <td>&lt;BOL&gt;</td>    <td>&lt;/BOL&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>斜体</td>    <td>&lt;ITA&gt;</td>    <td>&lt;/ITA&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>下划线</td>    <td>&lt;UND&gt;</td>    <td>&lt;/UND&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>全部大写</td>    <td>&lt;ACP&gt;</td>    <td>&lt;/ACP&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>小型大写字母</td>    <td>&lt;SCP&gt;</td>    <td>&lt;/SCP&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>上标</td>    <td>&lt;SUP&gt;</td>    <td>&lt;/SUP&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>下标</td>    <td>&lt;SUB&gt;</td>    <td>&lt;/SUB&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>字符间距</td>    <td>&lt;CHR&gt;</td>    <td>&lt;/CHR&gt;</td>    <td>spacing = {1-}</td>    <td>表示相对于常规字符间距的调整百分比；0% 表示没有调整。</td>  </tr>  <tr>    <td>字符宽度</td>    <td>&lt;CHR&gt;</td>    <td>&lt;/CHR&gt;</td>    <td> </td>    <td>表示相对于常规字符宽度的调整百分比；0% 表示没有调整。</td>  </tr>  <tr>    <td>词间距</td>    <td>&lt;WRD&gt;</td>    <td>&lt;/WRD&gt;</td>    <td>spacing = {1-}</td>    <td>表示词间的间距百分比；100% 表示常规间距。</td>  </tr>  <tr>    <td>行间距</td>    <td>&lt;LIN&gt;</td>    <td>&lt;/LIN&gt;</td>    <td>leading = {1-}</td>    <td>表示相对于常规行间距的调整（单位为磅）；0 磅表示没有调整。</td>  </tr>  <tr>    <td>不加粗</td>    <td>&lt;_BOL&gt;</td>    <td>&lt;/BOL&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>不倾斜</td>    <td>&lt;_ITA&gt;</td>    <td>&lt;/_ITA&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>不加下划线</td>    <td>&lt;_UND&gt;</td>    <td>&lt;/_UND&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>不加上标</td>    <td>&lt;_SUP&gt;</td>    <td>&lt;/_SUP&gt;</td>    <td>无</td>    <td> </td>  </tr>  <tr>    <td>不加下标</td>    <td>&lt;_SUB&gt;</td>    <td>&lt;/_SUB&gt;</td>    <td>无</td>    <td> </td>  </tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>ArcGIS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>角标</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>高德地图获取天津道路交通态势</title>
+    <link href="/2016/12/23/%E4%BA%A4%E9%80%9A%E6%80%81%E5%8A%BF/"/>
+    <url>/2016/12/23/%E4%BA%A4%E9%80%9A%E6%80%81%E5%8A%BF/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>道路状态</p></blockquote><span id="more"></span><h2 id="获取矩形区域内道路交通状态"><a href="#获取矩形区域内道路交通状态" class="headerlink" title="获取矩形区域内道路交通状态"></a>获取矩形区域内道路交通状态</h2><p>详细说明请阅读官方说明文档<a href="https://lbs.amap.com/api/webservice/guide/api/trafficstatus">交通态势</a></p><h3 id="范围经纬度"><a href="#范围经纬度" class="headerlink" title="范围经纬度"></a>范围经纬度</h3><p>矩形范围需要用高德坐标描述，通过<code>JS API</code>的<a href="https://developer.amap.com/demo/javascript-api/example/map/click-to-get-lnglat">获取鼠标点击经纬度</a>功能得到左下及右上坐标。<br><strong>注意：矩形对角线不能超过10公里</strong></p><h3 id="请求说明"><a href="#请求说明" class="headerlink" title="请求说明"></a>请求说明</h3><p>请求如下：<br><a href="https://restapi.amap.com/v3/traffic/status/rectangle?rectangle=117.670834,38.919082;117.733319,38.988499&amp;extensions=all&amp;levels=1&amp;key=xxxxxxx">https://restapi.amap.com/v3/traffic/status/rectangle?rectangle=117.670834,38.919082;117.733319,38.988499&amp;extensions=all&amp;levels=1&amp;key=xxxxxxx</a></p><ul><li>其中<code>rectangle</code>为矩形区域范围，对角坐标用<code>;</code>隔开</li><li><code>levels</code>指定道路等级，下面各值代表的含义：<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">1</span>：高速（京藏高速）<br><span class="hljs-attribute">2</span>：城市快速路、国道(西三环、<span class="hljs-number">103</span>国道)<br><span class="hljs-attribute">3</span>：高速辅路（G<span class="hljs-number">6</span>辅路）<br><span class="hljs-attribute">4</span>：主要道路（长安街、三环辅路路）<br><span class="hljs-attribute">5</span>：一般道路（彩和坊路）<br><span class="hljs-attribute">6</span>：无名道路<br></code></pre></div></td></tr></table></figure></li><li><code>key</code>需要自己注册申请<br>  <strong>说明：交通态势接口计划将于2020年12月31日下线，目前不再对新用户开放。如需合作请通过</strong><a href="https://console.amap.com/dev/ticket/type/others"><strong>工单</strong></a><strong>进行商务咨询。</strong></li><li>返回结果为<code>json</code>格式</li></ul><h3 id="结果存储"><a href="#结果存储" class="headerlink" title="结果存储"></a>结果存储</h3><p>环境：<code>R</code>，<code>Rstudio</code><br>Library：<code>curl</code></p><ol><li><p>受矩形范围限定，需要将目标区域分割成多块矩形，分别进行获取。创建<code>tjarea.csv</code>文件保存每块区域的请求地址。每个地址一行，无需表头。</p></li><li><p>建立<code>tj_traffic.r</code>脚本，每10分钟一次请求，保存json文件到本地</p><figure class="highlight r"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs R">library(curl)  <br>setwd(<span class="hljs-string">&quot;E:/&quot;</span>)  <br>Url = read.csv(<span class="hljs-string">&quot;E:/TRAFFIC/tjarea.csv&quot;</span>,header = <span class="hljs-literal">FALSE</span>)  <br>mytime = Sys.time()  <br>mydate = format(mytime,<span class="hljs-string">&quot;%Y%m%d&quot;</span>)  <br>dir.create(mydate)  <br>nowhour = substr(<span class="hljs-built_in">as.character</span>(Sys.time()),<span class="hljs-number">12</span>,<span class="hljs-number">13</span>)  <br>nowmin = substr(<span class="hljs-built_in">as.character</span>(Sys.time()),<span class="hljs-number">15</span>,<span class="hljs-number">16</span>)  <br><span class="hljs-built_in">min</span> =   <br>  <span class="hljs-built_in">switch</span> (<span class="hljs-built_in">as.numeric</span>(nowmin)%/%10+<span class="hljs-number">1</span>,  <br>  <span class="hljs-string">&quot;00&quot;</span>,         <br>  <span class="hljs-string">&quot;10&quot;</span>,  <br>  <span class="hljs-string">&quot;20&quot;</span>,  <br>  <span class="hljs-string">&quot;30&quot;</span>,  <br>  <span class="hljs-string">&quot;40&quot;</span>,  <br>  <span class="hljs-string">&quot;50&quot;</span>  <br>)  <br>  dir.create(paste(mydate,<span class="hljs-string">&quot;/&quot;</span>,nowhour,<span class="hljs-built_in">min</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>))  <br>  tempdir = paste(mydate,<span class="hljs-string">&quot;/&quot;</span>,nowhour,<span class="hljs-built_in">min</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>)  <br><span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">315</span>) &#123;  <br>  url = <span class="hljs-built_in">as.character</span>(Url[i,]);  <br>  dir = paste(<span class="hljs-string">&quot;E:/TRAFFIC/TJTRAFFIC/&quot;</span>,tempdir,<span class="hljs-string">&quot;/tj_&quot;</span>, <span class="hljs-built_in">as.character</span>(i),<span class="hljs-string">&quot;.json&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>);  <br>  curl_download(url, dir)  <br>&#125;<br></code></pre></div></td></tr></table></figure></li><li><p>建立<code>bat</code>文件，用于设置Windows定时任务。</p><figure class="highlight bat"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bat">Rscript -e &quot;source(\&quot;E:/TJTRAFFIC/tj_traffic.R/&quot;,encoding = &#x27;UTF-<span class="hljs-number">8</span>&#x27;)&quot;<br></code></pre></div></td></tr></table></figure></li></ol><h3 id="Json解析"><a href="#Json解析" class="headerlink" title="Json解析"></a>Json解析</h3><p>Library：<code>rjson</code>,<code>xlsx</code><br>解析json文件中的roadinfo，其中包含多条道路数据，用rbind拼接并添加timestamp，添加路名与描述组成的唯一字段，每小时输出一个文件xlsx</p><figure class="highlight r"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs R">Sys.setenv(JAVA_HOME=<span class="hljs-string">&quot;C:/Program Files/Java/jre1.8.0\_111&quot;</span>)   <br>library(rjson)  <br>library(dplyr)  <br>library(xlsx)  <br><span class="hljs-comment"># 设置工作目录  </span><br>setwd(<span class="hljs-string">&quot;E:/TJTRAFFIC/&quot;</span>) <br><span class="hljs-comment"># 读取模板</span><br>roadtraffic = readRDS(<span class="hljs-string">&quot;roadtraffic.rds&quot;</span>)  <br><br><span class="hljs-comment">#日期循环</span><br><span class="hljs-keyword">for</span> (date <span class="hljs-keyword">in</span> <span class="hljs-number">20161122</span>:<span class="hljs-number">20161123</span>) &#123;  <br>  <span class="hljs-keyword">for</span> (hour <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>:<span class="hljs-number">23</span>) &#123;  <br>    <span class="hljs-keyword">for</span> (k <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>:<span class="hljs-number">5</span>) &#123;  <br>      <span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">195</span>) &#123;  <br>          tryCatch(&#123;  <br>            result = fromJSON(file = paste(  <br>              date,<span class="hljs-string">&quot;/&quot;</span>,formatC(hour,width = <span class="hljs-number">2</span>,flag = <span class="hljs-string">&#x27;0&#x27;</span>),k,<span class="hljs-string">&quot;0/tj\_&quot;</span>,i,<span class="hljs-string">&quot;.json&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>  <br>            ))  <br>            <span class="hljs-keyword">if</span> (result$status == <span class="hljs-number">1</span>) &#123;  <br>              roads = result$trafficinfo$roads  <br>              temp = do.call(rbind,roads)  <br>              temp = as.data.frame(temp)  <br>              strtime = paste(  <br>                date,formatC(hour,width = <span class="hljs-number">2</span>,flag = <span class="hljs-string">&#x27;0&#x27;</span>),k,<span class="hljs-string">&quot;000&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>  <br>              )  <br>              temp = mutate(temp,timestamp = strtime)  <br>              roadtraffic = rbind.data.frame(roadtraffic,temp)  <br>            &#125;  <br>          &#125;  <br>            ,error=<span class="hljs-keyword">function</span>(e) <span class="hljs-literal">NULL</span>   <br>          )  <br>      &#125;  <br>    &#125;  <br>    roadtraffic = mutate(roadtraffic, fullname = paste(name,direction,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>))  <br>    write.xlsx2(roadtraffic,paste(<span class="hljs-string">&quot;excel/&quot;</span>,date,formatC(hour,width = <span class="hljs-number">2</span>,flag = <span class="hljs-string">&#x27;0&#x27;</span>),<span class="hljs-string">&quot;.xlsx&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>), row.name = <span class="hljs-literal">FALSE</span>)  <br>    roadtraffic = readRDS(<span class="hljs-string">&quot;roadtraffic.rds&quot;</span>)  <br>  &#125;  <br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>高德API</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ArcGIS路网网格划分</title>
+    <link href="/2016/10/17/ArcGIS_%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%86/"/>
+    <url>/2016/10/17/ArcGIS_%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%86/</url>
+    
+    <content type="html"><![CDATA[<p>在已有网格的情况下，用网格将道路切断，以便建立道路和网格的对应关系。</p><span id="more"></span><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>现有北京<a href="http://mattzou.github.io/2016/02/28/ArcGIS_Fishnet_2016-02-28/#">网格图层（线要素）</a>以及北京<strong>路网图层</strong>，要用网格线切分道路。</p><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>将网格图层中的全部要素复制到路网图层，选用<code> Planarize Lines</code>工具，将相交线打断，完成切分后通过要素筛选，将参与切分的网格线删除，剩下的路网就是切分好的了，接着通过<a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">要素映射</a>建立道路与网格的映射关系，道路网格划分就完成了。 </p><h3 id="工具位置"><a href="#工具位置" class="headerlink" title="工具位置"></a>工具位置</h3><p>图层进入编辑状态后，<strong>Advanced Editing</strong> 工具栏上，点击即运行。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%861.jpg/pic" alt="路网切分 1"> </p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>1.在<strong>路网图层</strong>上<a href="http://resources.arcgis.com/zh-cn/help/main/10.2/index.html#/na/01m60000005p000000/">启动编辑</a>;</p><p>2.<a href="resources.arcgis.com/zh-cn/help/main/10.2/index.html#/na/00s50000000w000000/">全选</a><strong>网格图层</strong>要素，<code> Ctrl + C</code> ，然后<code>Ctrl + V</code> 到<strong>路网图层</strong>;</p><p>3.在合并生成的新路网图层中全选要素，在<strong>Advanced Editing</strong> 工具栏上点击<a href="http://resources.arcgis.com/en/help/main/10.2/index.html#//01m800000012000000/">Planarize Lines</a>工具；</p><p>4.打开切分完成后的图层属性表，通过网格图层特有属性，用<a href="http://resources.arcgis.com/zh-cn/help/main/10.2/index.html#/na/00s500000021000000/">按属性选择</a>方法，将网格线要素选出，并删除，剩下的就是切分好的路网；</p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><blockquote><p>道路均在网格线处被截断：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%862.jpg/pic" alt="路网切分 2"></p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>ArcGIS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>路网切分</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>“公益云图”数据可视化创新大赛技术汇总</title>
+    <link href="/2016/09/26/%E2%80%9C%E5%85%AC%E7%9B%8A%E4%BA%91%E5%9B%BE%E2%80%9D%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%9B%E6%96%B0%E5%A4%A7%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/"/>
+    <url>/2016/09/26/%E2%80%9C%E5%85%AC%E7%9B%8A%E4%BA%91%E5%9B%BE%E2%80%9D%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%9B%E6%96%B0%E5%A4%A7%E8%B5%9B%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/</url>
+    
+    <content type="html"><![CDATA[<p>本篇用以总结参赛以来各种技术实现及思路。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/%E5%A4%A9%E6%B1%A0.JPG" alt="天池"></p><blockquote><p>别管对手是否强大，动手去做，说不定有奇迹呢！</p></blockquote><span id="more"></span><hr><h1 id="参赛思考"><a href="#参赛思考" class="headerlink" title="参赛思考"></a>参赛思考</h1><h2 id="队伍"><a href="#队伍" class="headerlink" title="队伍"></a>队伍</h2><p>队伍名称纠结了我半天，想想用<code>R</code>这么学术的软件做可视化交互，必是要折腾一番，本着内心小小的<code>Geeker</code>精神，外加英文代号<code>Matt</code>，就这么凑了个<em>MGeek</em>.</p><h2 id="赛题"><a href="#赛题" class="headerlink" title="赛题"></a>赛题</h2><p>选了个跟自己专业对口的，哈！</p><blockquote><p><strong>空气质量与大气环境</strong></p></blockquote><h3 id="涉及数据"><a href="#涉及数据" class="headerlink" title="涉及数据"></a>涉及数据</h3><ul><li>区域内空气质量的实时监测数据，以及监测点的地理坐标;</li><li>当地气象局提供的气压、温度、湿度、降水与风力风向等数据，以及信息采集点的地理坐标;</li></ul><h3 id="呈现内容"><a href="#呈现内容" class="headerlink" title="呈现内容"></a>呈现内容</h3><p><strong>空气质量与大气环境的关系</strong><br>    以时间流逝的方式，动态展现区域内空气质量变化。比如在地图图层上，以颜色表示空气质量、以箭头方向和粗细表示风力风向、以观测点位置的动态图标表示温度和湿度等;</p><p><strong>空气污染梯度和区域污染估计</strong><br>    通过曲线拟合，在地图上，绘制类似等高线型的空气污染梯度图，对没有空气质量监测的城市和地区进行空气质量估计;</p><p><strong>风和降水对空气污染的帮助</strong><br>    通常由于风和降水的作用，可以显著改善空气质量。通过关联分析，定量的了解给定风力或降水条件下，空气质量会得到多大程度改善，空气质量改善的速度是什么样的;</p><p><strong>推断空气污染物来源（高级内容）</strong><br>    通过污染物扩散趋势和梯度，推断污染源发生的地理位置，并在地图上标识;</p><p><strong>拟合空气污染与大气环境方程（高级内容）</strong><br>    拟合空气污染物扩散的方程，制作交互式的污染物扩散预测，通过用户输入可改变某地的气象状况，然后动态模拟在设定的空气状况下，污染物扩散的趋势、范围和速度。</p><h2 id="作品"><a href="#作品" class="headerlink" title="作品"></a>作品</h2><h3 id="使用数据"><a href="#使用数据" class="headerlink" title="使用数据"></a>使用数据</h3><ul><li>全国县级城市实时天气数据</li><li>全国风场格点实况数据</li><li>国控站点监测实时空气污染数据</li><li>国控空气检测站点分布数据</li><li>南京市道路卡口车辆监测数据</li><li>近期Global Forecast System (GFS)数据 United States’ National Weather Service (NWS)获取</li></ul><h3 id="作品设计思路"><a href="#作品设计思路" class="headerlink" title="作品设计思路"></a>作品设计思路</h3><ul><li>污染源排放污染物后随大气活动在环境中扩散，跟踪大气运动轨迹，提供了一个溯流而上的方式。</li><li>因此现有空气质量监测与大气环境观测体系所提供的数据不仅可以分析污染有多重，还可以通过关联分析推断污染源的位置。</li><li>结合环境数据、地图位置信息，分析污染来源。</li></ul><h3 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h3><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><ul><li>数据处理<br>  <em>R、MATLAB、Excel、ArcGIS</em></li><li>图像处理<br>  <em>Adobe Photoshop</em></li><li>服务组件<br>  <em>Docker、Shiny server、Node.js</em></li><li>部署<br>  <em>阿里云ECS</em></li></ul><h4 id="创作方法"><a href="#创作方法" class="headerlink" title="创作方法"></a>创作方法</h4><ol><li>展示数据获取及处理</li><li>R 数据处理</li><li>Rmarkdown编写展示文档，基于以下组件：<br><a href="http://rmarkdown.rstudio.com/">R Markdown</a>、<a href="http://rmarkdown.rstudio.com/flexdashboard/">flexdashboard</a>、<a href="http://ggplot2.org/">ggplot2</a>、<a href="https://plot.ly/r/">Plotly For R</a>、<a href="http://jkunst.com/highcharter/">Highcharter</a>、<a href="http://rstudio.github.io/leaflet/">Leaflet For R</a></li><li>动态风场图基于<a href="https://github.com/dannycochran/windable">windable</a>项目</li><li><a href="https://www.rstudio.com/products/shiny/shiny-server/">Shiny server</a>作为Web server，动态编译R markdown文件生成交互页面</li><li><a href="https://hub.docker.com/r/quantumobject/docker-shiny/">Docker</a>打包以上组件，部署到阿里云ECS</li></ol><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><blockquote><ol><li> <a href="http://mattzou.github.io/2016/02/28/ArcGIS_Fishnet_2016-02-28/#">[R可视化工具]</a> <strong>可视化</strong> 工具汇总</li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Plotly]</a> <strong>可视化</strong> <code>Plotly For R</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[R markdown]</a> <strong>可视化</strong> <code>R markdown</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Flexdashboard]</a> <strong>可视化</strong> <code>Flexdashboard</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Plotly]</a> <strong>可视化</strong> <code>Plotly For R</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Shiny server]</a> <strong>可视化</strong> <code>Shiny server</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Leaflet]</a> <strong>可视化</strong> <code>Plotly For R</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Highcharter]</a> <strong>可视化</strong> <code>Plotly For R</code> </li><li> <a href="http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#">[Docker]</a> <strong>可视化</strong> <code>Plotly For R</code> </li></ol></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>天池</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>目录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Oracle SQL*Loader 应用</title>
+    <link href="/2016/03/18/SQLLDR/"/>
+    <url>/2016/03/18/SQLLDR/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>来了一大批单个大小动辄7G的文本文件，导入数据表中，怎么办!!!!尝试用<code>PL/SQL Developer</code>中的文本导入器，结果====<strong>卡死</strong>=====很久之后====<strong>卡死</strong></p></blockquote><span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>Oracle常用的表数据迁移方法有以下几种：</p><ol><li><p>A表导出包含 <code>insert</code> 的sql，逐条插入B表中</p></li><li><p>建立数据库间的 dblink，然后用 <code>create table B as select * from A@dblink where </code>，或 <code>insert into B select * from A@dblink where </code></p></li><li><p><code>expdp</code> A 表，再 <code>impdp</code> 到 B 表</p></li><li><p>文本数据采用<strong>SQL*Loader</strong> (sqlldr) </p><p> 第1、2种方式可用以下方式优化导入效率：</p> <figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql"><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> B nologging;  <br><span class="hljs-keyword">insert</span> <span class="hljs-comment">/* +APPEND */</span> <span class="hljs-keyword">into</span> B(col1,col2) <span class="hljs-keyword">values</span>(val1,val2);  <br><span class="hljs-keyword">insert</span> <span class="hljs-comment">/* +APPEND */</span> <span class="hljs-keyword">into</span> B <span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> A<span class="hljs-variable">@dblink</span> <span class="hljs-keyword">where</span>  ;  <br></code></pre></div></td></tr></table></figure><h2 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h2></li><li><p><strong>SQL*Loader</strong> 使用过程中需要创建一个控制文件<code>.ctl</code>，示例如下：</p></li></ol>  <figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">OPTIONS (<span class="hljs-keyword">rows</span><span class="hljs-operator">=</span><span class="hljs-number">100000</span>)  <span class="hljs-comment">/*定义sqlldr部分参数*/</span><br>load data<br>infile<span class="hljs-string">&#x27;F:\2014-10-31.txt&#x27;</span><span class="hljs-comment">/*指定数据文件*/</span><br><span class="hljs-keyword">insert</span><br><span class="hljs-comment">/*</span><br><span class="hljs-comment">在操作类型 insert 位置可选一下值：</span><br><span class="hljs-comment">1) insert   --为缺省方式，在数据装载开始时要求表为空</span><br><span class="hljs-comment">2) append   --在表中追加新记录</span><br><span class="hljs-comment">3) replace  --删除旧记录(用 delete from table 语句)，替换成新装载的记录</span><br><span class="hljs-comment">4) truncate --删除旧记录(用 truncate table 语句)，替换成新装载的记录</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">into</span> <span class="hljs-keyword">table</span> user_table<br>fields terminated <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;,&#x27;</span><span class="hljs-comment">/*指定字段分隔符*/</span><br>Optionally enclosed <span class="hljs-keyword">by</span> <span class="hljs-string">&#x27;&quot;&#x27;</span> <span class="hljs-comment">/*可选。 数据中每个字段用 &#x27;&quot;&#x27; 框起，如果字段中有 &quot;,&quot; 分隔符，可避免将字段截断*/</span><br>(<br>PLATE,<br>ACROSS_TIME <span class="hljs-type">DATE</span>&quot;YYYY-MM-DD HH24:MI:SS&quot;,  <span class="hljs-comment">/*指定接受日期的格式，相当用 to_date() 函数转换*/</span><br>VEH_SPD NUMBER<span class="hljs-comment">/*字段指定类型，默认是 CHARACTER 类型*/</span><br>)<br></code></pre></div></td></tr></table></figure><ol start="2"><li>然后再执行<code>sqlldr</code>命令，</li></ol><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">sqlldr userid<span class="hljs-variable">@service</span> control<span class="hljs-operator">=</span>user.ctl<br></code></pre></div></td></tr></table></figure><p> 命令包含以下<strong>关键字</strong>：</p><figure class="highlight sql"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs sql">    userid <span class="hljs-comment">-- ORACLE 用户名/口令</span><br>   control <span class="hljs-comment">-- 控制文件名</span><br>       log <span class="hljs-comment">-- 日志文件名</span><br>       bad <span class="hljs-comment">-- 错误文件名</span><br>      data <span class="hljs-comment">-- 数据文件名</span><br>   discard <span class="hljs-comment">-- 废弃文件名</span><br>discardmax <span class="hljs-comment">-- 允许废弃的文件的数目         (全部默认)</span><br>      <span class="hljs-keyword">skip</span> <span class="hljs-comment">-- 要跳过的逻辑记录的数目  (默认 0)</span><br>      load <span class="hljs-comment">-- 要加载的逻辑记录的数目  (全部默认)</span><br>    errors <span class="hljs-comment">-- 允许的错误的数目         (默认 50)</span><br>      <span class="hljs-keyword">rows</span> <span class="hljs-comment">-- 常规路径绑定数组中或直接路径保存数据间的行数(默认: 常规路径 64, 所有直接路径)</span><br>  bindsize <span class="hljs-comment">-- 常规路径绑定数组的大小 (以字节计)  (默认 256000)</span><br>    silent <span class="hljs-comment">-- 运行过程中隐藏消息 (标题,反馈,错误,废弃,分区)</span><br>    direct <span class="hljs-comment">-- 使用直接路径                     (默认 FALSE)</span><br>   parfile <span class="hljs-comment">-- 参数文件: 包含参数说明的文件的名称</span><br>  parallel <span class="hljs-comment">-- 执行并行加载                    (默认 FALSE)</span><br>      file <span class="hljs-comment">-- 要从以下对象中分配区的文件</span><br>skip_unusable_indexes <span class="hljs-comment">-- 不允许/允许使用无用的索引或索引分区  (默认 FALSE)</span><br>skip_index_maintenance <span class="hljs-comment">-- 没有维护索引, 将受到影响的索引标记为无用  (默认 FALSE)</span><br>commit_discontinued <span class="hljs-comment">-- 提交加载中断时已加载的行  (默认 FALSE)</span><br>  readsize <span class="hljs-comment">-- 读取缓冲区的大小               (默认 1048576)</span><br>external_table <span class="hljs-comment">-- 使用外部表进行加载; NOT_USED, GENERATE_ONLY, EXECUTE  (默认NOT_USED)</span><br>columnarrayrows <span class="hljs-comment">-- 直接路径列数组的行数  (默认 5000)</span><br>streamsize <span class="hljs-comment">-- 直接路径流缓冲区的大小 (以字节计)  (默认 256000)</span><br>multithreading <span class="hljs-comment">-- 在直接路径中使用多线程</span><br> resumable <span class="hljs-comment">-- 启用或禁用当前的可恢复会话  (默认 FALSE)</span><br>resumable_name <span class="hljs-comment">-- 有助于标识可恢复语句的文本字符串</span><br>resumable_timeout <span class="hljs-comment">-- RESUMABLE 的等待时间 (以秒计)  (默认 7200)</span><br>date_cache <span class="hljs-comment">-- 日期转换高速缓存的大小 (以条目计)  (默认 1000)</span><br>no_index_errors <span class="hljs-comment">-- 出现任何索引错误时中止加载  (默认 FALSE)</span><br></code></pre></div></td></tr></table></figure><blockquote><p>以上部分参数可以在控制文件中以<code>OPTIONS()</code>来定义</p></blockquote><h2 id="性能提升"><a href="#性能提升" class="headerlink" title="性能提升"></a>性能提升</h2><ol><li><strong>Direct</strong>导入可以跳过数据库的相关逻辑<code>(DIRECT=TRUE)</code>，而直接将数据导入到数据文件中，可以提高导入数据的性能。当然，在很多情况下，不能使用此参数(如果主键重复的话会使索引的状态变成<strong>UNUSABLE</strong>)</li><li>使用 <code>ROWS=n</code> 限定<code>commit</code>频率</li><li>使用并行载入，只在** Direct path loads<strong>模式下可用，这个选项可让</strong>SQL*Loader**同时执行多个任务。<figure class="highlight plaintext"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs plsql">sqlldr control=first.ctl  parallel=true direct=true<br>sqlldr control=second.ctl parallel=true direct=true<br></code></pre></div></td></tr></table></figure></li><li> 使用<code>unrecoverable</code>，此选项禁止<code>redo</code>日志的产生，只在** Direct path loads**模式可用。  </li></ol><ul><li>效果<br>  <img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/sql/sqlldr.JPG" alt="效果"></li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="http://www.cnblogs.com/benio/archive/2011/10/14/2211171.html">SQL*Loader详解</a></li><li><a href="http://www.remote-dba.net/teas_rem_util18.htm">Maximizing SQL*Loader Performance</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>Oracle</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SQL*Loader</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ArcGIS要素映射关系建立</title>
+    <link href="/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/"/>
+    <url>/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/</url>
+    
+    <content type="html"><![CDATA[<p>要素映射关系是工作中常遇到的问题，举个例子，比如一个面要素图层和一个点要素图层，要想知道每个点是落在哪个面之中，就需要建立一个点和面的映射关系。</p><span id="more"></span><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>现有北京<a href="http://mattzou.github.io/2016/02/28/ArcGIS_Fishnet_2016-02-28/#">网格图层</a>以及北京<strong>环线图层</strong>，要确定网格中每个格点处于几环。</p><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>选用<code> Join Data</code>工具，** Join data from another layer on spatial location **方法将两个图层的要素进行映射。 </p><h3 id="工具位置"><a href="#工具位置" class="headerlink" title="工具位置"></a>工具位置</h3><p>右键单击图层，选择<code>Join and Relates</code>，菜单中选<code>Join</code>。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB.1.jpg/pic" alt="映射关系 1"> </p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><blockquote><p>在目标图层也就是<strong>网格图层</strong>上单击右键，找到<code> Join</code>工具；</p></blockquote><ol><li>选择** Join **类型，第一种是只连接两个图层属性表，第二种是根据空间位置将图层要素进行连接，同时连接属性表；</li><li>选择连接对象，这里选择环线图层；</li><li>选择连接<code> Options</code>，第二种方式可以实现我们所需要的映射关系，即落入相应环线要素的网格都将被赋予<strong>环线图层</strong>的属性，如果给<strong>环线图层</strong>的每个要素都进行标记，比如一环为<code> ID</code>字段为* 1 <em>，那么在连接后，落在一环内的网格将会增加一个字段<code> ID</code> ，值为</em> 1 *；</li><li>导出文件。</li></ol><blockquote><p>参数选择如下：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB.2.jpg/pic" alt="映射关系 2"></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><blockquote><p>生成的新图层如下所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB.3.JPG/pic" alt="映射关系 3"></p><p>打开图层属性表，可以看到新增的字段，标识网格所处的环线，通过<code>selec by attributes</code>高亮所有有映射关系的网格，和环线图层匹配正确，目的达到。</p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>ArcGIS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>映射关系</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ArcGIS创建网格</title>
+    <link href="/2016/02/28/ArcGIS_Fishnet/"/>
+    <url>/2016/02/28/ArcGIS_Fishnet/</url>
+    
+    <content type="html"><![CDATA[<p>在排放展示和统计过程中，需要按照网格的方式进行划分，需要建立网格。</p><span id="more"></span><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul><li> 创建网格，覆盖现有图层要素</li><li> 可调整网格大小</li><li> 获取网格中心坐标</li></ul><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>在ArcGIS中，应用<strong>系统工具箱</strong>中的<code>Create Fishnet</code>工具来创建网格。</p><h3 id="工具位置"><a href="#工具位置" class="headerlink" title="工具位置"></a>工具位置</h3><p>在<strong>Catalog</strong>中选择<code>Toolboxes</code>，找到<code>System Toolboxes</code>，其中<code>Data Management Tools</code>工具箱中点开<code>Feature Class</code>一项就可以看见<code>Create Fishnet</code>工具。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.1.jpg" alt="create fishnet 1"></p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol><li>选择导出文件位置；</li><li><strong>可选项</strong>选择现有图层为模板，自动生成网格边界范围</li><li>修改自动生成范围数值；</li><li>手动输入网格边界范围，如果<em>2</em>步骤选择了模板图层，会自动生成边界数值；</li><li>设置网格宽度及高度<strong>数值单位与图层坐标系统匹配</strong>；</li><li>设置网格行数和列数<strong>如果选择了模板图层，最好都设置为0，会自动根据以上输入的网格尺寸及图层范围计算行列数，不用自己计算</strong>；</li><li><strong>可选项</strong>生成每个网格中心点图层，这个选项在之后定位网格位置时有用处；</li><li>选择网格类型，<code>POLYLINE</code>及<code>POLYGON</code>分别是生成线要素网格或生成面要素网格；</li></ol><blockquote><p>以天津市为模板图层，生成一个覆盖天津市的1Km*1Km的网格，参数选择如下图所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.2.jpg" alt="create fishnet 2"></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><blockquote><p>设置好参数后生成的网格图层如下所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.3.JPG" alt="create fishnet 3"></p><p>以上就完成了网格图层的生成，接下来就可以用生成的网格对其他图层进行切分等操作了。</p><hr>]]></content>
+    
+    
+    <categories>
+      
+      <category>ArcGIS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网格</tag>
+      
+      <tag>Fishnet</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ArcGIS 常用功能应用汇总</title>
+    <link href="/2016/02/27/ArcGIS%E5%AF%BC%E8%88%AA/"/>
+    <url>/2016/02/27/ArcGIS%E5%AF%BC%E8%88%AA/</url>
+    
+    <content type="html"><![CDATA[<p>本篇用以记录平时使用ArcGIS时掌握的方法，这里汇总记录。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/earth.jpg" alt="earth"></p><blockquote><p>当你第一次背起背包踏上远方的路,就永远都不会停下来!</p></blockquote><span id="more"></span><hr><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><blockquote><ol><li> <a href="http://mattzou.com/2016/02/28/ArcGIS_Fishnet/#">[创建网格]</a> <strong>ArcGIS</strong> <code>Create Fishnet</code> 应用</li><li> <a href="http://mattzou.com/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/#">[要素映射]</a> <strong>ArcGIS</strong> <code>Join</code> 应用</li><li> <a href="http://mattzou.com/2016/10/17/ArcGIS_%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%86/#">[路网切分]</a> <strong>ArcGIS</strong> <code>Planarize Lines</code> 应用</li><li> <a href="https://mattzou.com/2019/07/07/ArcGIS_%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/#">[角标]</a> <strong>ArcGIS</strong> 专题图<code>Legend</code>设置</li></ol></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>ArcGIS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>目录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
