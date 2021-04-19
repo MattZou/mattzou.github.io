@@ -107,7 +107,7 @@ youyan:
 ## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
-background_image: 20
+background_image: 177
 
 # Base Font Size | 字号调节
 base_font_size: 20  #px, 16 - 24
@@ -301,6 +301,9 @@ word_count:
   enable: true
   # 只在文章详情显示(不在首页显示)
   only_article_visit: true
+
+# 开启百度站长平台自动推送(https://ziyuan.baidu.com/linksubmit/index)
+baidu_push: false
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
