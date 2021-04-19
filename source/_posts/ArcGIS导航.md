@@ -9,7 +9,7 @@ top: 1
 ---
 本篇用以记录平时使用ArcGIS时掌握的方法，这里汇总记录。
 
-![earth](http://i.imgur.com/W3GrKoC.jpg)
+![earth](https://mattblog.oss-cn-beijing.aliyuncs.com/img/earth.jpg)
 
 > 当你第一次背起背包踏上远方的路,就永远都不会停下来!
 

@@ -105,7 +105,7 @@ no_index_errors -- 出现任何索引错误时中止加载  (默认 FALSE)
 4.  使用`unrecoverable`，此选项禁止`redo`日志的产生，只在** Direct path loads**模式可用。  
 
 - 效果
-	![效果](https://mattblog.oss-cn-beijing.aliyuncs.com/img/sqlldr.JPG)
+	![效果](https://mattblog.oss-cn-beijing.aliyuncs.com/img/sql/sqlldr.JPG)
 
 
 ## 参考

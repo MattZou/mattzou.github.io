@@ -184,7 +184,7 @@ friends:
 #friends: false
 
 #是否开启“关于我”。
-aboutme: 数据分析
+aboutme: true
 #aboutme: false
 
 # Open link in a new tab | 是否在新窗口打开链接
@@ -216,7 +216,7 @@ ie_updater:
 
 # Tab Title Change | 标签页标题切换
 tab_title_change: 
-  on: false
+  on: true
   left_tab_title: '(つェ⊂) 我藏好了哦~ '
   return_tab_title: '(*´∇｀*) 被你发现啦~ '
 
@@ -284,7 +284,7 @@ progressBar:
 
 gitalk:
   on: false
-  clientID: 'dbcb411f7588b3a9f7a3'
+  clientID: ''
   clientSecret: ''
   repo: 'mattzou.github.io' # 仓库地址
   owner: 'MattZou' # 拥有者
@@ -303,7 +303,7 @@ word_count:
   only_article_visit: true
 
 # 开启百度站长平台自动推送(https://ziyuan.baidu.com/linksubmit/index)
-baidu_push: false
+baidu_push: true
 
 CDN:
   jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
