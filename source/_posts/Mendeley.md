@@ -2,6 +2,8 @@
 layout: post
 title: Mendeley文献引用格式设置
 author: MattZou
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/group_7.svg
+banner_img: https://cms-cdn.mendeley.com/prod/styles/1400_x_600/s3fs/C-5_ResearchManager@2x.png
 date: 2021/04/03
 updated: 2021/04/03
 categories: [软件使用]
@@ -47,3 +49,12 @@ CSL用于配置引文格式，Zotero、Mendeley等软件支持此方式定义引
 - CSL文件类似XML样式，可以直接更改其中配置
 ![本地配置](https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/Mendeley\_CSL.jpg/pic)
 - 文件修改保存后，在`More Styles...`窗口中已安装可见。
+
+## 推荐插件
+### [Mendeley Reference Manager](https://www.mendeley.com/reference-management/reference-manager)
+![](https://cms-cdn.mendeley.com/prod/2021-03/stable_release_desktop_latest_mrm_img.png?qQFcGBSStKhraR6U0otl7yyd3t0ZQdBR)
+Mendeley现在主推**Mendeley Reference Manager**，貌似有意取代现有**Desktop**软件，感觉就是一个套壳浏览器😂
+
+### [Mendeley Web Importer](https://www.mendeley.com/reference-management/web-importer)
+![](https://cms-cdn.mendeley.com/prod/2019-09/web_importer_chrome_desktop.png?TOU3kk7tQZboiFYrIn90RYh1TyDQvaTg)
+文献导入利器，浏览器随看随导，自动识别内容o(￣▽￣)ｄ
