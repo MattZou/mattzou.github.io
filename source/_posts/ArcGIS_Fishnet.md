@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ArcGIS创建网格
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/features-hero_spatial-analysis.png
 author: MattZou
 date: 2016/2/28 18:09:22 
 categories: ArcGIS

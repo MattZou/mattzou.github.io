@@ -448,7 +448,7 @@ index:
 
       # 请求地址
       # Request url
-      url: "https://v1.hitokoto.cn?c=d"
+      url: "https://v1.hitokoto.cn?c=i&c=k&c=d"
 
       # 请求方法
       # Request method
@@ -886,23 +886,19 @@ links:
       avatar: "/img/favicon.png"
     }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
-    }
-    - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
-    }
-    - {
       title: "一言",
       intro: "用代码表达言语的魅力，用代码书写山河的壮丽。",
       link: "https://developer.hitokoto.cn/",
       avatar: "https://developer.hitokoto.cn/logo.png"
     }
+    - {
+      title: "CUTER",
+      intro: "南开大学城市交通污染防治研究中心",
+      link: "http://cuter.nankai.edu.cn/",
+      avatar: "https://mattblog.oss-cn-beijing.aliyuncs.com/img/ico/cuter.png"
+    }
+
+    
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image

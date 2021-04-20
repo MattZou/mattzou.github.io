@@ -42,7 +42,7 @@ gg:  **Grammar of Graphics**，ggplot2，把图分为数据，几何图形，图
 
 
 ## Reference
-[^1]: https://ggplot2-book.org/index.html
+[^1]: [ggplot2: elegant graphics for data analysis](https://ggplot2-book.org/index.html)
 
 
 
