@@ -2,8 +2,8 @@
 title: ArcGIS 常用功能应用汇总
 author: MattZou
 date: 2016/2/27 11:12:51 
-index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/index_default.png
-banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/earth.jpg
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/index_default.png/bg
+banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/earth.jpg/bg
 categories: 目录
 tags: 
 - ArcGIS
