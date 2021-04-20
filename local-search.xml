@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>遥感云平台</title>
+    <link href="/2021/04/20/%E9%81%A5%E6%84%9F%E4%BA%91%E5%B9%B3%E5%8F%B0/"/>
+    <url>/2021/04/20/%E9%81%A5%E6%84%9F%E4%BA%91%E5%B9%B3%E5%8F%B0/</url>
+    
+    <content type="html"><![CDATA[<p>在Google成功推广GEE之后，微软也推出了<strong>Planetary Computer</strong>（所以真是做PC系统起家的🤡），两大巨头都瞄准了空间云计算服务（微软估计是盖茨建议的😏<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="How to Avoid a Climate Disaster">[1]</span></a></sup>）这块市场，基于自身强大的云存储能力，为全球环境数据找了个好的去处，同时也能让大家白嫖<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="微软官方商城">[2]</span></a></sup>一下算力（毕竟显卡那么贵了💴💴）===</p><p>这是个导航，会持续更新这两个产品的使用笔记及感悟。</p><h2 id="Google-Earth-Engine"><a href="#Google-Earth-Engine" class="headerlink" title="Google Earth Engine"></a>Google Earth Engine</h2><blockquote><ol><li> <a href="%5Ba%5D(https://mattzou.com/2019/11/30/GEE%E7%AC%94%E8%AE%B0/)">入门笔记</a> <strong>GEE</strong> 基础笔记</li><li> <a href="%5Bb%5D(https://mattzou.com/2019/11/30/GEE%E7%AC%94%E8%AE%B0_%E4%BA%A7%E5%93%81%E6%98%BE%E7%A4%BA/)">产品显示</a> <strong>GEE</strong> <code>code editor</code> 应用</li></ol></blockquote><h2 id="Planetary-Computer"><a href="#Planetary-Computer" class="headerlink" title="Planetary Computer"></a>Planetary Computer</h2><p>邀请测试阶段，<a href="https://planetarycomputer.microsoft.com/">申请地址</a></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://www.gatesnotes.com/Energy/My-new-climate-book-is-finally-here">How to Avoid a Climate Disaster</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.microsoftstore.com.cn/">微软官方商城</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>目录</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>遥感</tag>
+      
+      <tag>云服务</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ggplot2总结</title>
     <link href="/2021/04/15/R_ggplot2/"/>
     <url>/2021/04/15/R_ggplot2/</url>
@@ -99,6 +126,8 @@
       
       <tag>GEE</tag>
       
+      <tag>遥感</tag>
+      
     </tags>
     
   </entry>
@@ -124,6 +153,8 @@
       
       <tag>GEE</tag>
       
+      <tag>遥感</tag>
+      
     </tags>
     
   </entry>
@@ -140,12 +171,14 @@
     
     <categories>
       
-      <category>ArcGIS</category>
+      <category>软件使用</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>ArcGIS</tag>
       
       <tag>角标</tag>
       
@@ -162,6 +195,12 @@
     
     <content type="html"><![CDATA[<blockquote><p>道路状态</p></blockquote><span id="more"></span><h2 id="获取矩形区域内道路交通状态"><a href="#获取矩形区域内道路交通状态" class="headerlink" title="获取矩形区域内道路交通状态"></a>获取矩形区域内道路交通状态</h2><p>详细说明请阅读官方说明文档<a href="https://lbs.amap.com/api/webservice/guide/api/trafficstatus">交通态势</a></p><h3 id="范围经纬度"><a href="#范围经纬度" class="headerlink" title="范围经纬度"></a>范围经纬度</h3><p>矩形范围需要用高德坐标描述，通过<code>JS API</code>的<a href="https://developer.amap.com/demo/javascript-api/example/map/click-to-get-lnglat">获取鼠标点击经纬度</a>功能得到左下及右上坐标。<br><strong>注意：矩形对角线不能超过10公里</strong></p><h3 id="请求说明"><a href="#请求说明" class="headerlink" title="请求说明"></a>请求说明</h3><p>请求如下：<br><a href="https://restapi.amap.com/v3/traffic/status/rectangle?rectangle=117.670834,38.919082;117.733319,38.988499&amp;extensions=all&amp;levels=1&amp;key=xxxxxxx">https://restapi.amap.com/v3/traffic/status/rectangle?rectangle=117.670834,38.919082;117.733319,38.988499&amp;extensions=all&amp;levels=1&amp;key=xxxxxxx</a></p><ul><li>其中<code>rectangle</code>为矩形区域范围，对角坐标用<code>;</code>隔开</li><li><code>levels</code>指定道路等级，下面各值代表的含义：<figure class="highlight apache"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs apache"><span class="hljs-attribute">1</span>：高速（京藏高速）<br><span class="hljs-attribute">2</span>：城市快速路、国道(西三环、<span class="hljs-number">103</span>国道)<br><span class="hljs-attribute">3</span>：高速辅路（G<span class="hljs-number">6</span>辅路）<br><span class="hljs-attribute">4</span>：主要道路（长安街、三环辅路路）<br><span class="hljs-attribute">5</span>：一般道路（彩和坊路）<br><span class="hljs-attribute">6</span>：无名道路<br></code></pre></div></td></tr></table></figure></li><li><code>key</code>需要自己注册申请<br>  <strong>说明：交通态势接口计划将于2020年12月31日下线，目前不再对新用户开放。如需合作请通过</strong><a href="https://console.amap.com/dev/ticket/type/others"><strong>工单</strong></a><strong>进行商务咨询。</strong></li><li>返回结果为<code>json</code>格式</li></ul><h3 id="结果存储"><a href="#结果存储" class="headerlink" title="结果存储"></a>结果存储</h3><p>环境：<code>R</code>，<code>Rstudio</code><br>Library：<code>curl</code></p><ol><li><p>受矩形范围限定，需要将目标区域分割成多块矩形，分别进行获取。创建<code>tjarea.csv</code>文件保存每块区域的请求地址。每个地址一行，无需表头。</p></li><li><p>建立<code>tj_traffic.r</code>脚本，每10分钟一次请求，保存json文件到本地</p><figure class="highlight r"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs R">library(curl)  <br>setwd(<span class="hljs-string">&quot;E:/&quot;</span>)  <br>Url = read.csv(<span class="hljs-string">&quot;E:/TRAFFIC/tjarea.csv&quot;</span>,header = <span class="hljs-literal">FALSE</span>)  <br>mytime = Sys.time()  <br>mydate = format(mytime,<span class="hljs-string">&quot;%Y%m%d&quot;</span>)  <br>dir.create(mydate)  <br>nowhour = substr(<span class="hljs-built_in">as.character</span>(Sys.time()),<span class="hljs-number">12</span>,<span class="hljs-number">13</span>)  <br>nowmin = substr(<span class="hljs-built_in">as.character</span>(Sys.time()),<span class="hljs-number">15</span>,<span class="hljs-number">16</span>)  <br><span class="hljs-built_in">min</span> =   <br>  <span class="hljs-built_in">switch</span> (<span class="hljs-built_in">as.numeric</span>(nowmin)%/%10+<span class="hljs-number">1</span>,  <br>  <span class="hljs-string">&quot;00&quot;</span>,         <br>  <span class="hljs-string">&quot;10&quot;</span>,  <br>  <span class="hljs-string">&quot;20&quot;</span>,  <br>  <span class="hljs-string">&quot;30&quot;</span>,  <br>  <span class="hljs-string">&quot;40&quot;</span>,  <br>  <span class="hljs-string">&quot;50&quot;</span>  <br>)  <br>  dir.create(paste(mydate,<span class="hljs-string">&quot;/&quot;</span>,nowhour,<span class="hljs-built_in">min</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>))  <br>  tempdir = paste(mydate,<span class="hljs-string">&quot;/&quot;</span>,nowhour,<span class="hljs-built_in">min</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>)  <br><span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">315</span>) &#123;  <br>  url = <span class="hljs-built_in">as.character</span>(Url[i,]);  <br>  dir = paste(<span class="hljs-string">&quot;E:/TRAFFIC/TJTRAFFIC/&quot;</span>,tempdir,<span class="hljs-string">&quot;/tj_&quot;</span>, <span class="hljs-built_in">as.character</span>(i),<span class="hljs-string">&quot;.json&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>);  <br>  curl_download(url, dir)  <br>&#125;<br></code></pre></div></td></tr></table></figure></li><li><p>建立<code>bat</code>文件，用于设置Windows定时任务。</p><figure class="highlight bat"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs bat">Rscript -e &quot;source(\&quot;E:/TJTRAFFIC/tj_traffic.R/&quot;,encoding = &#x27;UTF-<span class="hljs-number">8</span>&#x27;)&quot;<br></code></pre></div></td></tr></table></figure></li></ol><h3 id="Json解析"><a href="#Json解析" class="headerlink" title="Json解析"></a>Json解析</h3><p>Library：<code>rjson</code>,<code>xlsx</code><br>解析json文件中的roadinfo，其中包含多条道路数据，用rbind拼接并添加timestamp，添加路名与描述组成的唯一字段，每小时输出一个文件xlsx</p><figure class="highlight r"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs R">Sys.setenv(JAVA_HOME=<span class="hljs-string">&quot;C:/Program Files/Java/jre1.8.0\_111&quot;</span>)   <br>library(rjson)  <br>library(dplyr)  <br>library(xlsx)  <br><span class="hljs-comment"># 设置工作目录  </span><br>setwd(<span class="hljs-string">&quot;E:/TJTRAFFIC/&quot;</span>) <br><span class="hljs-comment"># 读取模板</span><br>roadtraffic = readRDS(<span class="hljs-string">&quot;roadtraffic.rds&quot;</span>)  <br><br><span class="hljs-comment">#日期循环</span><br><span class="hljs-keyword">for</span> (date <span class="hljs-keyword">in</span> <span class="hljs-number">20161122</span>:<span class="hljs-number">20161123</span>) &#123;  <br>  <span class="hljs-keyword">for</span> (hour <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>:<span class="hljs-number">23</span>) &#123;  <br>    <span class="hljs-keyword">for</span> (k <span class="hljs-keyword">in</span> <span class="hljs-number">0</span>:<span class="hljs-number">5</span>) &#123;  <br>      <span class="hljs-keyword">for</span> (i <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>:<span class="hljs-number">195</span>) &#123;  <br>          tryCatch(&#123;  <br>            result = fromJSON(file = paste(  <br>              date,<span class="hljs-string">&quot;/&quot;</span>,formatC(hour,width = <span class="hljs-number">2</span>,flag = <span class="hljs-string">&#x27;0&#x27;</span>),k,<span class="hljs-string">&quot;0/tj\_&quot;</span>,i,<span class="hljs-string">&quot;.json&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>  <br>            ))  <br>            <span class="hljs-keyword">if</span> (result$status == <span class="hljs-number">1</span>) &#123;  <br>              roads = result$trafficinfo$roads  <br>              temp = do.call(rbind,roads)  <br>              temp = as.data.frame(temp)  <br>              strtime = paste(  <br>                date,formatC(hour,width = <span class="hljs-number">2</span>,flag = <span class="hljs-string">&#x27;0&#x27;</span>),k,<span class="hljs-string">&quot;000&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>  <br>              )  <br>              temp = mutate(temp,timestamp = strtime)  <br>              roadtraffic = rbind.data.frame(roadtraffic,temp)  <br>            &#125;  <br>          &#125;  <br>            ,error=<span class="hljs-keyword">function</span>(e) <span class="hljs-literal">NULL</span>   <br>          )  <br>      &#125;  <br>    &#125;  <br>    roadtraffic = mutate(roadtraffic, fullname = paste(name,direction,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>))  <br>    write.xlsx2(roadtraffic,paste(<span class="hljs-string">&quot;excel/&quot;</span>,date,formatC(hour,width = <span class="hljs-number">2</span>,flag = <span class="hljs-string">&#x27;0&#x27;</span>),<span class="hljs-string">&quot;.xlsx&quot;</span>,sep = <span class="hljs-string">&quot;&quot;</span>, collapse = <span class="hljs-literal">NULL</span>), row.name = <span class="hljs-literal">FALSE</span>)  <br>    roadtraffic = readRDS(<span class="hljs-string">&quot;roadtraffic.rds&quot;</span>)  <br>  &#125;  <br>&#125;<br></code></pre></div></td></tr></table></figure>]]></content>
     
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+    </categories>
     
     
     <tags>
@@ -184,12 +223,14 @@
     
     <categories>
       
-      <category>ArcGIS</category>
+      <category>软件使用</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>ArcGIS</tag>
       
       <tag>路网切分</tag>
       
@@ -209,14 +250,14 @@
     
     <categories>
       
-      <category>天池</category>
+      <category>目录</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>目录</tag>
+      <tag>天池</tag>
       
     </tags>
     
@@ -234,7 +275,7 @@
     
     <categories>
       
-      <category>Oracle</category>
+      <category>软件使用</category>
       
     </categories>
     
@@ -242,6 +283,8 @@
     <tags>
       
       <tag>SQL*Loader</tag>
+      
+      <tag>Oracle</tag>
       
     </tags>
     
@@ -259,12 +302,14 @@
     
     <categories>
       
-      <category>ArcGIS</category>
+      <category>软件使用</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>ArcGIS</tag>
       
       <tag>映射关系</tag>
       
@@ -284,12 +329,14 @@
     
     <categories>
       
-      <category>ArcGIS</category>
+      <category>软件使用</category>
       
     </categories>
     
     
     <tags>
+      
+      <tag>ArcGIS</tag>
       
       <tag>网格</tag>
       
@@ -311,14 +358,14 @@
     
     <categories>
       
-      <category>ArcGIS</category>
+      <category>目录</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>目录</tag>
+      <tag>ArcGIS</tag>
       
     </tags>
     
