@@ -1,1 +1,2 @@
 *.yml filter=_configCode
+source/lib/* linguist-vendored

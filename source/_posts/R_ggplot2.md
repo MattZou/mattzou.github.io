@@ -3,7 +3,7 @@ layout: post
 title: ggplot2总结
 author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/logo.png
-banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/README-example-1.png
+banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/README-example-1.png/bg
 date: 2021/04/15
 updated: 2021/04/17
 categories: [软件使用]

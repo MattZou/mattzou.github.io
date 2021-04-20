@@ -4,8 +4,10 @@ title: Oracle SQL*Loader 应用
 index_img: https://www.oracle.com/a/ocom/img/rc30v1-application-development.png?foo2
 author: MattZou
 date: 2016/3/18 12:31:09 
-categories: Oracle
-tags: [SQL*Loader]
+categories: 软件使用
+tags: 
+- SQL*Loader
+- Oracle
 description:
 ---
 

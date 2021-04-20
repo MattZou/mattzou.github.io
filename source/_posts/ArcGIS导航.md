@@ -4,9 +4,9 @@ author: MattZou
 date: 2016/2/27 11:12:51 
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/index_default.png
 banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/earth.jpg
-categories: ArcGIS
+categories: 目录
 tags: 
-- 目录
+- ArcGIS
 top: 1
 ---
 本篇用以记录平时使用ArcGIS时掌握的方法，这里汇总记录。

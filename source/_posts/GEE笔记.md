@@ -6,8 +6,11 @@ index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/solution_earth.j
 banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/tools_laptop.jpg/bg
 date: 2019/11/30
 updated: 2021/04/11
-categories: [软件使用]
-tags: [GEE]
+categories: 
+- [软件使用]
+tags:
+- [GEE]
+- [遥感]
 description:
 ---
 
