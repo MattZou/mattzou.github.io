@@ -15,15 +15,6 @@ page.banner_mask_alpha = theme.post.banner_mask_alpha
           <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none"><%= page.subtitle || page.title %></h1>
-            <% if(theme.post.updated && theme.post.updated.enable) { %>
-              <p class="note note-info">
-                <% if (theme.post.updated.relative) { %>
-                  <%- theme.post.updated.content %><%- relative_date(page.updated, theme.post.meta.date.format) %>
-                <% } else { %>
-                  <%- theme.post.updated.content %><%- date(page.updated, theme.post.meta.date.format) %>
-                <% } %>
-              </p>
-            <% } %>
             <div class="markdown-body">
               <%- page.content %>
             </div>
@@ -47,6 +38,15 @@ page.banner_mask_alpha = theme.post.banner_mask_alpha
                   </div>
                 <% } %>
               </div>
+              <% if(theme.post.updated && theme.post.updated.enable) { %>
+                <p class="note note-info">
+                  <% if (theme.post.updated.relative) { %>
+                    <%- theme.post.updated.content %><%- relative_date(page.updated, theme.post.meta.date.format) %>
+                  <% } else { %>
+                    <%- theme.post.updated.content %><%- date(page.updated, theme.post.meta.date.format) %>
+                  <% } %>
+                </p>
+              <% } %>
               <% if(theme.post.copyright.enable && theme.post.copyright.content && page.copyright !== false) { %>
                 <p class="note note-warning">
                   <% if (typeof page.copyright === 'string' && page.copyright !== '') { %>

@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Oracle SQL*Loader 应用
-index_img: https://www.oracle.com/a/ocom/img/rc30v1-application-development.png?foo2
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/rc30v1-application-development.png/bg
 author: MattZou
 date: 2016/3/18 12:31:09 
+updated: 2016/3/18 12:31:09 
 categories: 软件使用
 tags: 
 - SQL*Loader
-- Oracle
+- Oracle Utilities
 description:
 ---
 
@@ -111,7 +112,7 @@ no_index_errors -- 出现任何索引错误时中止加载  (默认 FALSE)
 	![效果](https://mattblog.oss-cn-beijing.aliyuncs.com/img/sql/sqlldr.JPG)
 
 
-## 参考
+## Reference
 1. [SQL*Loader详解][1]
 2. [Maximizing SQL*Loader Performance][2]
 [1]:http://www.cnblogs.com/benio/archive/2011/10/14/2211171.html
