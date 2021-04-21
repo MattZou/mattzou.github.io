@@ -282,9 +282,9 @@
     
     <tags>
       
-      <tag>Data Pump</tag>
-      
       <tag>Oracle Utilities</tag>
+      
+      <tag>Data Pump</tag>
       
     </tags>
     
@@ -309,9 +309,9 @@
     
     <tags>
       
-      <tag>Oracle Utilities</tag>
-      
       <tag>SQL*Loader</tag>
+      
+      <tag>Oracle Utilities</tag>
       
     </tags>
     
@@ -351,7 +351,7 @@
     <link href="/2016/02/28/ArcGIS_Fishnet/"/>
     <url>/2016/02/28/ArcGIS_Fishnet/</url>
     
-    <content type="html"><![CDATA[<p>在排放展示和统计过程中，需要按照网格的方式进行划分，需要建立网格。</p><span id="more"></span><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul><li> 创建网格，覆盖现有图层要素</li><li> 可调整网格大小</li><li> 获取网格中心坐标</li></ul><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>在ArcGIS中，应用<strong>系统工具箱</strong>中的<code>Create Fishnet</code>工具来创建网格。</p><h3 id="工具位置"><a href="#工具位置" class="headerlink" title="工具位置"></a>工具位置</h3><p>在<strong>Catalog</strong>中选择<code>Toolboxes</code>，找到<code>System Toolboxes</code>，其中<code>Data Management Tools</code>工具箱中点开<code>Feature Class</code>一项就可以看见<code>Create Fishnet</code>工具。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.1.jpg" alt="create fishnet 1"></p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol><li>选择导出文件位置；</li><li><strong>可选项</strong>选择现有图层为模板，自动生成网格边界范围</li><li>修改自动生成范围数值；</li><li>手动输入网格边界范围，如果<em>2</em>步骤选择了模板图层，会自动生成边界数值；</li><li>设置网格宽度及高度<strong>数值单位与图层坐标系统匹配</strong>；</li><li>设置网格行数和列数<strong>如果选择了模板图层，最好都设置为0，会自动根据以上输入的网格尺寸及图层范围计算行列数，不用自己计算</strong>；</li><li><strong>可选项</strong>生成每个网格中心点图层，这个选项在之后定位网格位置时有用处；</li><li>选择网格类型，<code>POLYLINE</code>及<code>POLYGON</code>分别是生成线要素网格或生成面要素网格；</li></ol><blockquote><p>以天津市为模板图层，生成一个覆盖天津市的1Km*1Km的网格，参数选择如下图所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.2.jpg" alt="create fishnet 2"></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><blockquote><p>设置好参数后生成的网格图层如下所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.3.JPG" alt="create fishnet 3"></p><p>以上就完成了网格图层的生成，接下来就可以用生成的网格对其他图层进行切分等操作了。</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>在排放展示和统计过程中，需要按照网格的方式进行划分，需要建立网格。</p><span id="more"></span><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ul><li> 创建网格，覆盖现有图层要素</li><li> 可调整网格大小</li><li> 获取网格中心坐标</li></ul><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>在ArcGIS中，应用<strong>系统工具箱</strong>中的<code>Create Fishnet</code>工具来创建网格。</p><h3 id="工具位置"><a href="#工具位置" class="headerlink" title="工具位置"></a>工具位置</h3><p>在<strong>Catalog</strong>中选择<code>Toolboxes</code>，找到<code>System Toolboxes</code>，其中<code>Data Management Tools</code>工具箱中点开<code>Feature Class</code>一项就可以看见<code>Create Fishnet</code>工具。</p><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.1.jpg/pic" alt="create fishnet 1"></p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol><li>选择导出文件位置；</li><li><strong>可选项</strong>选择现有图层为模板，自动生成网格边界范围</li><li>修改自动生成范围数值；</li><li>手动输入网格边界范围，如果<em>2</em>步骤选择了模板图层，会自动生成边界数值；</li><li>设置网格宽度及高度<strong>数值单位与图层坐标系统匹配</strong>；</li><li>设置网格行数和列数<strong>如果选择了模板图层，最好都设置为0，会自动根据以上输入的网格尺寸及图层范围计算行列数，不用自己计算</strong>；</li><li><strong>可选项</strong>生成每个网格中心点图层，这个选项在之后定位网格位置时有用处；</li><li>选择网格类型，<code>POLYLINE</code>及<code>POLYGON</code>分别是生成线要素网格或生成面要素网格；</li></ol><blockquote><p>以天津市为模板图层，生成一个覆盖天津市的1Km*1Km的网格，参数选择如下图所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.2.jpg/pic" alt="create fishnet 2"></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><blockquote><p>设置好参数后生成的网格图层如下所示：</p></blockquote><p><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.3.JPG/pic" alt="create fishnet 3"></p><p>以上就完成了网格图层的生成，接下来就可以用生成的网格对其他图层进行切分等操作了。</p><hr>]]></content>
     
     
     <categories>
