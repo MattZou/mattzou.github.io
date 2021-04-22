@@ -7,8 +7,8 @@ index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/rc32-pmr-s
 author: MattZou
 categories: 软件使用
 tags: 
+- Oracle
 - Oracle Utilities
-- Data Pump
 description: Oracle数据迁移工具
 ---
 ## 背景

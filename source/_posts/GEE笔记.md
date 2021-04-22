@@ -9,8 +9,8 @@ updated: 2021/04/11
 categories: 
 - [软件使用]
 tags:
-- [GEE]
-- [遥感]
+- GEE
+- 遥感
 description:
 ---
 

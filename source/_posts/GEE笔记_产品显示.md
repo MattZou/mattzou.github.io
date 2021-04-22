@@ -1,16 +1,16 @@
 ---
 layout: post
-title: GEE常用卫星产品载入及显示
+title: GEE 常用卫星产品载入及显示
 author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/timelapse-hero.jpg/bg
 banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/gee/l8_vilankulos.jpg/bg
 date: 2019/11/30
 updated: 2021/04/11
 categories: 
-- [软件使用]
+- 软件使用
 tags: 
-- [GEE]
-- [遥感]
+- GEE
+- 遥感
 description:
 ---
 

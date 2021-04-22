@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mendeley文献引用格式设置
+title: Mendeley 文献引用格式设置
 author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/Mendeley/group_7.svg
 banner_img: https://cms-cdn.mendeley.com/prod/styles/1400_x_600/s3fs/C-5_ResearchManager@2x.png
 date: 2021/04/03
 updated: 2021/04/03
-categories: [软件使用]
-tags: [Mendeley]
+categories: 软件使用
+tags: Mendeley
 description:
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ArcGIS要素映射关系建立
+title: ArcGIS 要素映射关系建立
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/features-hero_directions.png/bg
 author: MattZou
 date: 2016/3/3 10:40:28 
