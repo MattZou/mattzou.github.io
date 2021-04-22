@@ -28,7 +28,7 @@ tags:
 
 在**Catalog**中选择`Toolboxes`，找到`System Toolboxes`，其中`Data Management Tools`工具箱中点开`Feature Class`一项就可以看见`Create Fishnet`工具。
 
-![create fishnet 1](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.1.jpg)
+![create fishnet 1](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.1.jpg/pic)
 
 ### 步骤
 
@@ -43,13 +43,13 @@ tags:
 
 > 以天津市为模板图层，生成一个覆盖天津市的1Km*1Km的网格，参数选择如下图所示：
 
-![create fishnet 2](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.2.jpg)
+![create fishnet 2](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.2.jpg/pic)
 
 ### 结果
 
 > 设置好参数后生成的网格图层如下所示：
 
-![create fishnet 3](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.3.JPG)
+![create fishnet 3](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/create%20fishnet.3.JPG/pic)
 
 以上就完成了网格图层的生成，接下来就可以用生成的网格对其他图层进行切分等操作了。
 
