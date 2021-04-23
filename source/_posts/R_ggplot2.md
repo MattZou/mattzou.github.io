@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ggplot2总结
+title: ggplot2 总结
 author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/logo.png/bg
 banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/README-example-1.png/bg
