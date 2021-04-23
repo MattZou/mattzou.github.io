@@ -20,9 +20,9 @@
     
     <tags>
       
-      <tag>遥感</tag>
-      
       <tag>云服务</tag>
+      
+      <tag>遥感</tag>
       
     </tags>
     
@@ -62,7 +62,7 @@
     <link href="/2021/04/10/Env-PPT%E7%B3%BB%E7%BB%9F/"/>
     <url>/2021/04/10/Env-PPT%E7%B3%BB%E7%BB%9F/</url>
     
-    <content type="html"><![CDATA[<p>把之前的设计整合一下，勉强看看。</p><object data="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Environment/%E7%B3%BB%E7%BB%9F.pdf" type="application/pdf" width="100%" height="450em">]]></content>
+    <content type="html"><![CDATA[<p>把之前的设计整合一下，勉强看看。</p><br><div class="row">    <embed src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Environment/%E7%B3%BB%E7%BB%9F.pdf" width="100%" height="550" type="application/pdf"></div><br>]]></content>
     
     
     <categories>
@@ -100,6 +100,33 @@
     <tags>
       
       <tag>Mendeley</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>交通与GNN</title>
+    <link href="/2020/12/11/Traffic-and-AI/"/>
+    <url>/2020/12/11/Traffic-and-AI/</url>
+    
+    <content type="html"><![CDATA[<br><div class="row">    <embed src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/Environment/Traffic%20and%20AI.pdf" width="100%" height="550" type="application/pdf"></div><br>]]></content>
+    
+    
+    <categories>
+      
+      <category>环保</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>交通</tag>
+      
+      <tag>GNN</tag>
       
     </tags>
     
@@ -458,6 +485,12 @@
     <content type="html"><![CDATA[<h2 id="笑笑"><a href="#笑笑" class="headerlink" title="笑笑"></a>笑笑</h2><p>喵星🌏</p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx1.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx4.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx2.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx5.jpg"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx3.jpg"></div></div></div><h2 id="小黑"><a href="#小黑" class="headerlink" title="小黑"></a>小黑</h2><p>高冷肥宅</p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xh1.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xh4.jpg"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xh2.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xh3.jpg"></div></div></div><h2 id="福安"><a href="#福安" class="headerlink" title="福安"></a>福安</h2><p>怎么说呢🐱‍🏍</p><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/fa4.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/fa2.jpg"></div><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/fa5.jpg"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/fa3.jpg"></div></div></div>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>猫</tag>
+      
+    </tags>
     
   </entry>
   
