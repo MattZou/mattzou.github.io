@@ -50,6 +50,11 @@ gg:  **Grammar of Graphics**，ggplot2，把图分为数据，几何图形，图
 
 ### Themes
 
+``` r
+axis.title.y = element_text(angle = 0, vjust = 0.5)
+```
+
+
 ### Facetting
 
 ### Annotations
