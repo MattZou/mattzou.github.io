@@ -38,7 +38,21 @@ install.packages("tidyverse")
 > [Hadley Wickham](http://hadley.nz/)
 - **我的理解**
 gg:  **Grammar of Graphics**，ggplot2，把图分为数据，几何图形，图形属性及部分，把图的各个部分定义为组件形式，组件实现数据与几何对象的映射，通过图形属性定义组件之间的组合形式进行绘图。
+
 ## Tricks and Bugs
+
+### Geoms
+
+### Scales
+#### label
+
+#### axis
+
+### Themes
+
+### Facetting
+
+### Annotations
 
 
 ## Reference
