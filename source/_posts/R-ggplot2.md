@@ -99,7 +99,7 @@ theme_grey()$plot.margin
 theme_get()$plot.margin 
 ```
 
-- [ggplot2 调整图例](https://mattzou.com/2019/04/21/ggplot2-Legend/)
+- [ggplot2 调整图例](https://mattzou.com//2020/07/14/ggplot2-Legend/)
 
 ### Color
 [ggplot2 颜色配置](https://mattzou.com/2019/04/21/ggplot2-Color/)
@@ -116,6 +116,7 @@ family = "RMN"
 ```
 
 ### Facetting
+[ggplot2 分面绘图](https://mattzou.com/2019/07/03/ggplot2-Facet/)
 
 ### Annotations
 
