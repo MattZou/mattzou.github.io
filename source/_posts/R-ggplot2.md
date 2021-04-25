@@ -46,6 +46,8 @@ p <-
  # 创建空白ggplot对象
  ggplot() +
  # 添加一个或多个几何对象
+ # 个人不太喜欢把data和aes放在ggplot()里全局设置
+ # 如果多个几何对象分别使用不同数据源，指定全局设置会造成混乱
  geom_point(data = , aes(x = , y = ), ...) + 
  # 设置坐标轴标题
  labs(x = , y = , ...) + 
@@ -81,6 +83,8 @@ ggpubr::show_point_shapes()
 
 - 轴标题旋转
 ``` r
+# angle定义旋转角度
+# 由于旋转后文字会与坐标轴干涉冲突，可设置vjust或hjust偏移量调整
 axis.title.y = element_text(angle = 0, vjust = 0.5)
 ```
 
@@ -94,6 +98,8 @@ theme_grey()$plot.margin
 # 其他主题（推荐）
 theme_get()$plot.margin 
 ```
+
+- [ggplot2 调整图例](https://mattzou.com/2019/04/21/ggplot2-Legend/)
 
 ### Color
 [ggplot2 颜色配置](https://mattzou.com/2019/04/21/ggplot2-Color/)
