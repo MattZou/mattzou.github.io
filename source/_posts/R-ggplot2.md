@@ -64,7 +64,7 @@ p <-
 
 以下内容为我在日常使用调整配置的tricks。
 ### Geoms
-#### geom_point
+- geom_point
 查看设置点的形状
 ``` r
 ggpubr::show_point_shapes()
@@ -73,10 +73,9 @@ ggpubr::show_point_shapes()
 
 
 ### Scales
-#### label
-[ggplot2 使用expression添加公式与数学符号](https://mattzou.com/2020/07/16/ggplot2-Expression/)
+- [ggplot2 使用expression添加公式与数学符号](https://mattzou.com/2020/07/16/ggplot2-Expression/)
 
-#### axis
+- [ggplot2 双坐标轴实现](https://mattzou.com/2020/07/16/2019/11/23/ggplot2-Dual-Axis/)
 
 ### Themes
 用于调整`theme(...)`中的内容。
