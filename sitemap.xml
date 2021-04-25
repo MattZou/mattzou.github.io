@@ -107,14 +107,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/2019/04/21/ggplot2-Color/</loc>
+    <loc>https://mattzou.com/2019/11/23/ggplot2-Dual-Axis/</loc>
     
     <lastmod>2020-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://mattzou.com/2019/11/23/ggplot2-Dual-Axis/</loc>
+    <loc>https://mattzou.com/2019/04/21/ggplot2-Color/</loc>
     
     <lastmod>2020-08-30</lastmod>
     
@@ -214,13 +214,6 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</loc>
-    <lastmod>2021-04-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://mattzou.com/tags/Fishnet/</loc>
     <lastmod>2021-04-25</lastmod>
     <changefreq>daily</changefreq>
@@ -235,14 +228,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
+    <loc>https://mattzou.com/tags/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</loc>
     <lastmod>2021-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
     <lastmod>2021-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -264,6 +257,13 @@
   
   <url>
     <loc>https://mattzou.com/tags/Mendeley/</loc>
+    <lastmod>2021-04-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -298,6 +298,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/tags/ggplot2/</loc>
+    <lastmod>2021-04-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/tags/%E4%BA%A4%E9%80%9A/</loc>
     <lastmod>2021-04-25</lastmod>
     <changefreq>daily</changefreq>
@@ -306,13 +313,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/GNN/</loc>
-    <lastmod>2021-04-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/ggplot2/</loc>
     <lastmod>2021-04-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
