@@ -22,7 +22,7 @@ ggplot2主要通过`FILL`和`COLOR`属性设置几何对象的颜色，可以直
 
 ## 调色板
 对于连续色阶或者多种色彩搭配，官方建议使用`RColorBrewer`提供的调色板。
-ggplot2原生支持通过设置`palette`来切换调色板
+ggplot2原生支持通过设置`palette`来切换调色板[^2]
 ``` r
 p + scale_color_brewer(palette = "PuOr")
 ```
@@ -46,7 +46,7 @@ show_col(hue_pal()(n))
 ```
 
 ### 自定义调色板
-当以上色板无法满足需求，可以通过以下方式自定义色板[^2]。
+当以上色板无法满足需求，可以通过以下方式自定义色板[^3]。
 
 - 生成色板
 主要使用`colorRampPalette`，详见[文档](https://www.rdocumentation.org/packages/dichromat/versions/1.1/topics/colorRampPalette)
@@ -77,4 +77,5 @@ p + scale_color_manual(colors = pal(n))
 
 ## Reference
 [^1]: [Dealing with colors in ggplot2](https://www.r-graph-gallery.com/ggplot2-color.html)
-[^2]: [R语言作图：自定义调色盘](https://zhuanlan.zhihu.com/p/144764468)
+[^2]: [ggplot2 colors : How to change colors automatically and manually?](http://www.sthda.com/english/wiki/ggplot2-colors-how-to-change-colors-automatically-and-manually)
+[^3]: [R语言作图：自定义调色盘](https://zhuanlan.zhihu.com/p/144764468)

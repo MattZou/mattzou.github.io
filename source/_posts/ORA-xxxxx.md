@@ -60,3 +60,12 @@ select to_date('2005-01-01 13:14:20','yyyy-MM-dd HH24:mi:ss') from dual;
 ``` sql
 select to_char(sysdate,'yyyy-MM-dd HH24:mi:ss') from dual;//mi是分钟
 ```
+
+## ORA-00059: 超出 DB_FILES 的最大值
+`init parameters`里的db_files空间不足
+``` sql
+show parameter db_files;
+alter system set db_files=xxMB scope=spfile;
+shutdown immediate;
+startup;
+```
