@@ -46,8 +46,8 @@ tags:
 
 ![路网切分 2](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%862.jpg/pic)
 
-[1]: http://mattzou.github.io/2016/02/28/ArcGIS_Fishnet_2016-02-28/#
-[2]: http://mattzou.github.io/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84_2016-03-03/#
+[1]: https://mattzou.com/2016/02/28/ArcGIS-Fishnet/#
+[2]: https://mattzou.com/2016/03/03/ArcGIS-%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/#
 [3]: http://resources.arcgis.com/zh-cn/help/main/10.2/index.html#/na/01m60000005p000000/
 [4]: resources.arcgis.com/zh-cn/help/main/10.2/index.html#/na/00s50000000w000000/
 [5]: http://resources.arcgis.com/en/help/main/10.2/index.html#//01m800000012000000/

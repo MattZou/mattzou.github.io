@@ -25,7 +25,7 @@ tags:
 > 4.  [[角标]][4] **ArcGIS** 专题图`Legend`设置
 
 
-[1]: http://mattzou.com/2016/02/28/ArcGIS_Fishnet/#
-[2]: http://mattzou.com/2016/03/03/ArcGIS_%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/#
-[3]: http://mattzou.com/2016/10/17/ArcGIS_%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%86/#
-[4]: https://mattzou.com/2019/07/07/ArcGIS_%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/#
+[1]: http://mattzou.com/2016/02/28/ArcGIS-Fishnet/#
+[2]: http://mattzou.com/2016/03/03/ArcGIS-%E8%A6%81%E7%B4%A0%E6%98%A0%E5%B0%84/#
+[3]: http://mattzou.com/2016/10/17/ArcGIS-%E8%B7%AF%E7%BD%91%E5%88%87%E5%88%86/#
+[4]: https://mattzou.com/2019/07/07/ArcGIS-%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/#

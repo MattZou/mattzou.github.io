@@ -50,7 +50,7 @@ tags:
 
 打开图层属性表，可以看到新增的字段，标识网格所处的环线，通过``` selec by attributes ```高亮所有有映射关系的网格，和环线图层匹配正确，目的达到。
 
-[1]: http://mattzou.github.io/2016/02/28/ArcGIS_Fishnet_2016-02-28/#
+[1]: https://mattzou.com/2016/02/28/ArcGIS-Fishnet/#
 
 
 ----------
