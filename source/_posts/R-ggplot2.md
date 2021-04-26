@@ -40,6 +40,8 @@ install.packages("tidyverse")
 gg:  **Grammar of Graphics**，ggplot2，把图分为数据，几何图形，图形属性等几个部分，把图的各个部分定义为组件形式，组件实现数据与几何对象的映射，通过图形属性定义组件之间的组合形式进行绘图。
 
 ## Tricks and Bugs
+
+### Framework
 个人习惯按以下核心框架绘图。
 ``` r
 p <- 
@@ -62,7 +64,7 @@ p <-
 ```
 各类图都可以在此模板基础上进行调整与自定义，详细配置建议参考[^2]。
 
-以下内容为我在日常使用调整配置的tricks。
+以下内容为我在日常使用中调整和配置的tricks。
 ### Geoms
 - geom_point
 查看设置点的形状
@@ -118,6 +120,8 @@ family = "RMN"
 [ggplot2 分面绘图](https://mattzou.com/2019/07/03/ggplot2-Facet/)
 
 ### Annotations
+[ggplot2 添加注释](https://mattzou.com/2020/10/21/ggplot2-Annotation/)
+
 
 
 ## Reference
