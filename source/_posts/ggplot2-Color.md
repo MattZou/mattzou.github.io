@@ -22,12 +22,17 @@ ggplot2主要通过`FILL`和`COLOR`属性设置几何对象的颜色，可以直
 
 ## 调色板
 对于连续色阶或者多种色彩搭配，官方建议使用`RColorBrewer`提供的调色板。
-ggplot2原生支持通过设置`palette`来切换调色板[^2]
+ggplot2原生支持通过设置`palette`来切换调色板[^2]，[这里](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes.html)提供了预设`ColorBrewer`调色板代号及预览。
 ``` r
 p + scale_color_brewer(palette = "PuOr")
 ```
-[这里](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes.html)提供了预设`ColorBrewer`调色板代号及预览。
 ![](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes_files/figure-html/thecode-1.png)
+
+另外一种官方原生支持的色板`Viridis`，[这里](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)有预设色板。这个色板以连续颜色为主，也可以通过设置`discrete=TRUE`属性使用离散色阶。
+``` r
+p + scale_color_viridis(option="magma")
+```
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/viridis.png/pic)
 
 此外还可通过[ggsci](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html)或者[ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)选择合适的调色板
 

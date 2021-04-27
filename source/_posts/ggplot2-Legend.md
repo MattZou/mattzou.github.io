@@ -17,7 +17,13 @@ description: 主要介绍ggplot2里Legend部分设置
 ggplot2提供`guide_legend()`设置图例[^1]，更多参数可参考。
 
 ## 常用设置
-以下设置在`theme()`中配置，常规设置请参考[此文](http://www.sthda.com/english/wiki/ggplot2-legend-easy-steps-to-change-the-position-and-the-appearance-of-a-graph-legend-in-r-software)，不再重复。
+以下设置在`theme()`中配置，常规设置请参考[此文](http://www.sthda.com/english/wiki/ggplot2-legend-easy-steps-to-change-the-position-and-the-appearance-of-a-graph-legend-in-r-software)。
+``` r
+# 图例位置与文字样式调整
+legend.position = |"left", "top", "right", "bottom", "none"|
+legend.text = element_text(...),
+legend.title = element_text(...)
+```
 
 我自己绘图时还对以下内容进行设置。
 
