@@ -34,7 +34,7 @@ ggplot(data, aes(x=day)) +
     sec.axis = sec_axis(~.*coeff, name="Second Axis")
   )
 ```
-![](https://www.r-graph-gallery.com/line-chart-dual-Y-axis-ggplot2_files/figure-html/thecode3-1.png)
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/thecode3-1.png/pic)
 这里有相关例子可以参考辅助理解[^5]。
 
 ## Reference

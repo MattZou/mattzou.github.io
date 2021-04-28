@@ -19,6 +19,7 @@ description:
 
 [**ggplot2**](https://ggplot2.tidyverse.org/index.html)是[tidyverse](https://www.tidyverse.org/)家族中进行数据可视化的核心package
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/tidyverse.jpg/pic)
+gg:  **Grammar of Graphics**
 
 ## How to use ggplot2
 ### 安装
@@ -37,7 +38,11 @@ install.packages("tidyverse")
 > All plots are composed of the **data**, the information you want to visualise, and a **mapping**, the description of how the data's variables are mapped to aesthetic attributes.[^1]
 > [Hadley Wickham](http://hadley.nz/)
 - **我的理解**
-gg:  **Grammar of Graphics**，ggplot2，把图分为数据，几何图形，图形属性等几个部分，把图的各个部分定义为组件形式，组件实现数据与几何对象的映射，通过图形属性定义组件之间的组合形式进行绘图。
+  ggplot2，把图分为数据，几何图形，图形属性等几个部分，图的各个部分被定义为组件形式，组件实现数据与几何对象的映射，通过图形属性定义组件之间的组合形式进行绘图。
+
+  传统绘图按类绘图，抽象程度过高，导致绘制复杂对象（形态和数量）时不够灵活，ggplot2 降低了图的耦合度，将对象层级由类型图降低到图组件，虽然ggplot2 实现方式偏向于函数式编程，但每个函数操作的仍是单个图组件对象，这便于工程化时进行移植与复用。
+
+  如今主流可视化方案中都采用数据与几何对象映射的思想，这样又将图与数据进行了解耦合，对于定义好的映射关系，只要输入数据格式一定，图就可以自动匹配。因此将数据处理步骤与绘图进行隔离。
 
 ## Tricks and Bugs
 

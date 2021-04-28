@@ -4,7 +4,7 @@ layout: post
 author: MattZou
 updated: 2020-08-31
 date: 2019-07-03
-index_img: https://buzzrbeeline.files.wordpress.com/2018/11/help.png
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/ggplot2-facet.png/bg
 categories: 软件使用
 tags:
 - R

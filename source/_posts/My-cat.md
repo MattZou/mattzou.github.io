@@ -4,7 +4,7 @@ layout: post
 author: MattZou
 updated: 2021-12-31
 date: 1970-01-01
-index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/fa1.jpg
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/fa1.jpg/bg
 categories: 
 tags:
 - 猫

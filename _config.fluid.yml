@@ -471,7 +471,7 @@ index:
   # 打开文章的标签方式
   # The browser tag to open the post
   # Available: _blank | _self
-  post_url_target: _self
+  post_url_target: _blank
 
   # 是否显示文章信息（时间、分类、标签）
   # Meta information of post
@@ -891,7 +891,12 @@ links:
       link: "http://cuter.nankai.edu.cn/",
       avatar: "https://mattblog.oss-cn-beijing.aliyuncs.com/img/ico/cuter.png"
     }
-
+    - {
+      title: "无形的风",
+      intro: "GEE开发专栏",
+      link: "https://www.zhihu.com/column/c_123993183",
+      avatar: "https://pic2.zhimg.com/v2-3bd0f5e275c12f4c18cd13bff4bb3110_xl.jpg"
+    }
     
 
   # 当成员头像加载失败时，替换为指定图片
