@@ -11,7 +11,7 @@
   <url>
     <loc>https://mattzou.com/2021/04/15/R-ggplot2/</loc>
     
-    <lastmod>2021-04-27</lastmod>
+    <lastmod>2021-04-28</lastmod>
     
   </url>
   
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/2019/11/23/ggplot2-Axis/</loc>
+    <loc>https://mattzou.com/2019/04/21/ggplot2-Color/</loc>
     
     <lastmod>2020-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://mattzou.com/2019/04/21/ggplot2-Color/</loc>
+    <loc>https://mattzou.com/2019/11/23/ggplot2-Axis/</loc>
     
     <lastmod>2020-08-30</lastmod>
     
@@ -135,14 +135,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/2019/07/03/ggplot2-Facet/</loc>
+    <loc>https://mattzou.com/2020/07/14/ggplot2-Legend/</loc>
     
     <lastmod>2020-08-30</lastmod>
     
   </url>
   
   <url>
-    <loc>https://mattzou.com/2020/07/14/ggplot2-Legend/</loc>
+    <loc>https://mattzou.com/2019/07/03/ggplot2-Facet/</loc>
     
     <lastmod>2020-08-30</lastmod>
     
@@ -249,14 +249,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
+    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-04-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
     <lastmod>2021-04-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -271,13 +271,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/%E9%81%A5%E6%84%9F/</loc>
-    <lastmod>2021-04-28</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/Mendeley/</loc>
     <lastmod>2021-04-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -299,6 +292,13 @@
   
   <url>
     <loc>https://mattzou.com/tags/Oracle-Utilities/</loc>
+    <lastmod>2021-04-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/Mendeley/</loc>
     <lastmod>2021-04-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
