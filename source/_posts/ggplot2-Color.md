@@ -26,7 +26,7 @@ ggplot2原生支持通过设置`palette`来切换调色板[^2]，[这里](https:
 ``` r
 p + scale_color_brewer(palette = "PuOr")
 ```
-![](https://www.r-graph-gallery.com/38-rcolorbrewers-palettes_files/figure-html/thecode-1.png)
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/thecode-1.png/pic)
 
 另外一种官方原生支持的色板`Viridis`，[这里](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html)有预设色板。这个色板以连续颜色为主，也可以通过设置`discrete=TRUE`属性使用离散色阶。
 ``` r
