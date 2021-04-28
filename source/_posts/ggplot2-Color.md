@@ -35,6 +35,7 @@ p + scale_color_viridis(option="magma")
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/viridis.png/pic)
 
 此外还可通过[ggsci](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html)或者[ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)选择合适的调色板
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/ggthemes-1.png/pic)
 
 ### 调色板hex代码查看
 - [这里](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)提供了`ColorBrewer`调色板动态预览及hex代码查看。

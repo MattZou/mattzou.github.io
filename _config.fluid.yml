@@ -880,12 +880,6 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
-    }
-    - {
       title: "一言",
       intro: "用代码表达言语的魅力，用代码书写山河的壮丽。",
       link: "https://developer.hitokoto.cn/",

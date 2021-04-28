@@ -65,21 +65,24 @@ p <-
 各类图都可以在此模板基础上进行调整与自定义，详细配置建议参考[^2]。
 
 以下内容为我在日常使用中调整和配置的tricks。
-### Geoms
-- geom_point
-查看设置点的形状
-``` r
-ggpubr::show_point_shapes()
-```
-![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/pointtype.png/pic)
 
-- geom_line
-查看设置线的形状
+### Structure
+ggplot2 的典型结构如下，`panel`部分用于承载几何对象，其他每个部分都可单独设置。
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/structure.png/pic)
+
+
+### Geoms
+各种Geoms的实现方法官方示例十分详细，请[移步](https://ggplot2.tidyverse.org/reference/index.html#section-layers)
 ``` r
+# 查看设置点的形状
+ggpubr::show_point_shapes()
+# 查看设置线的形状
 ggpubr::show_line_types()
 ```
+{% gi 3 1-1%}
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/pointtype.png/pic)
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/linetype.jpg/pic)
-
+{% endgi %}
 
 ### Scales
 - [ggplot2 坐标轴调整](https://mattzou.com/2019/11/23/ggplot2-Axis/)
@@ -141,6 +144,59 @@ family = "RMN"
 [ggplot2 添加注释](https://mattzou.com/2020/10/21/ggplot2-Annotation/)
 
 
+### Layout
+ggplot2 多图组合主要通过`grid`等一系列包实现[^5]。 
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/gridExtra.png/pic)
+规则排列
+``` r
+# 并排多图，nrow指定图像排列行数
+p + grid.arrange(p1, p2, nrow = 1)
+# 多图不规则排列，将需要排列的图像加入列表 gl，通过layout_matrix指定排列形式
+p + grid.arrange(
+  grobs = gl,
+  widths = c(2, 1, 1),
+  layout_matrix = rbind(c(1, 2, NA),
+                        c(3, 3, 4))
+  )
+```
+
+{% gi 3 1-1%}
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/ggplot2-mixing-multiple-plots-common-legend-data-visualization-1.png/pic)
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/layout_matrix.png/pic)
+{% endgi %}
+
+对于重叠图可以使用`annotation_custom`，指定子图排布位置。
+``` r
+# g 是子图元素
+p + annotation_custom(
+    grob = g,
+    # 定位坐标，左下右上点
+    xmin = 1,
+    xmax = 5,
+    ymin = 5,
+    ymax = 10
+  )
+```
+
+### Output
+图像输出直接使用`ggsave()`[^6]
+``` r
+ggsave(
+  # 图像名称
+  filename,
+  # 图对象
+  plot,
+  width = NA,
+  height = NA,
+  units = c("in", "cm", "mm"),
+  # 分辨率
+  dpi = 300,
+  # 对于tiff类型图像，建议加入此选项压缩图片
+  compression = "lzw")
+```
+Elsevier推荐出图尺寸，可以据此调整`width`
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/Elsevier.png/pic)
+
 ## Note
 - ggplot2 提供了强大的自定义功能，可以通过长期使用形成适应自己研究体系的绘图模板，方便绘图的标准化，未来使用时可将更多精力放在数据处理上。
 
@@ -182,6 +238,8 @@ family = "RMN"
 [^2]: [Function Reference](https://ggplot2.tidyverse.org/reference/index.html)
 [^3]: [r - 默认的ggplot2绘图边距是多少?](https://www.coder.work/article/6542920)
 [^4]: [R语言基础绘图之边距参数](https://www.jianshu.com/p/5fbaf17d9aee)
+[^5]: [Laying out multiple plots on a page](https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html)
+[^6]: [Save a ggplot (or other grid object) with sensible defaults](https://ggplot2.tidyverse.org/reference/ggsave.html)
 
 
 
