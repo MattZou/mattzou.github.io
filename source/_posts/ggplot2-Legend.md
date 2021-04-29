@@ -4,7 +4,7 @@ layout: post
 author: MattZou
 updated: 2020-08-31
 date: 2020-07-14
-index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/ggplot2-legend-example.png
+index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/ggplot2-legend-example.png/bg
 categories: 软件使用
 tags:
 - R

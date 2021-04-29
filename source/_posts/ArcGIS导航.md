@@ -19,10 +19,10 @@ tags:
 
 # 目录
 
-> 1.  [[创建网格]][1] **ArcGIS** `Create Fishnet` 应用
-> 2.  [[要素映射]][2] **ArcGIS** `Join` 应用
-> 3.  [[路网切分]][3] **ArcGIS** `Planarize Lines` 应用
-> 4.  [[角标]][4] **ArcGIS** 专题图`Legend`设置
+> 1.  [创建网格][1] **ArcGIS** `Create Fishnet` 应用
+> 2.  [要素映射][2] **ArcGIS** `Join` 应用
+> 3.  [路网切分][3] **ArcGIS** `Planarize Lines` 应用
+> 4.  [角标][4] **ArcGIS** 专题图`Legend`设置
 
 
 [1]: http://mattzou.com/2016/02/28/ArcGIS-Fishnet/#

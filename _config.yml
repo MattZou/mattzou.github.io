@@ -105,7 +105,13 @@ deploy:
 - type: git
   repository: git@github.com:MattZou/mattzou.github.io.git
   branch: master 
-#- type: baidu_url_submitter
+- type: baidu_url_submitter
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
 
 html_minifier:  
   collapseBooleanAttributes: true
