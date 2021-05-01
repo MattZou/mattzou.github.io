@@ -333,6 +333,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/tags/ggplot2/</loc>
+    <lastmod>2021-05-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/tags/%E4%BA%A4%E9%80%9A/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
@@ -341,13 +348,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/GNN/</loc>
-    <lastmod>2021-05-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/ggplot2/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -377,14 +377,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
+    <loc>https://mattzou.com/categories/%E7%9B%AE%E5%BD%95/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/categories/%E7%9B%AE%E5%BD%95/</loc>
+    <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
     <lastmod>2021-05-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
