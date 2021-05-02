@@ -99,21 +99,21 @@ attr(,"tzone")
 ## 正则表达式
 R 字符串处理支持在`pattern`使用正则表达式[^1]
 ```
-     '\n'          newline                                            
-     '\r'          carriage return                                    
-     '\t'          tab                                                
-     '\b'          backspace                                          
-     '\a'          alert (bell)                                       
-     '\f'          form feed                                          
-     '\v'          vertical tab                                       
-     '\\'          backslash '\'                                      
-     '\''          ASCII apostrophe '''                               
-     '\"'          ASCII quotation mark '"'                           
-     '\`'          ASCII grave accent (backtick) '`'                  
-     '\nnn'        character with given octal code (1, 2 or 3 digits) 
-     '\xnn'        character with given hex code (1 or 2 hex digits)  
-     '\unnnn'      Unicode character with given code (1-4 hex digits) 
-     '\Unnnnnnnn'  Unicode character with given code (1-8 hex digits) 
+   '\n'          newline                                            
+   '\r'          carriage return                                    
+   '\t'          tab                                                
+   '\b'          backspace                                          
+   '\a'          alert (bell)                                       
+   '\f'          form feed                                          
+   '\v'          vertical tab                                       
+   '\\'          backslash '\'                                      
+   '\''          ASCII apostrophe '''                               
+   '\"'          ASCII quotation mark '"'                           
+   '\`'          ASCII grave accent (backtick) '`'                  
+   '\nnn'        character with given octal code (1, 2 or 3 digits) 
+   '\xnn'        character with given hex code (1 or 2 hex digits)  
+   '\unnnn'      Unicode character with given code (1-4 hex digits) 
+   '\Unnnnnnnn'  Unicode character with given code (1-8 hex digits) 
 
     [:alnum:]
     Alphanumeric characters: [:alpha:] and [:digit:].
