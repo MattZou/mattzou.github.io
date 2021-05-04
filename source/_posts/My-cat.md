@@ -16,6 +16,7 @@ description: 人生中的三只猫（截至2021）
 ## 笑笑 
 喵星🌏
 
+师姐做实验时在隧道里带回，刚回来超小一只，在几个没有经验的铲屎官以及云养金主的照顾下，逐渐长成窈窕淑女。最喜欢出没在后背与椅子的缝隙里充当护腰。
 {% gi 5 4-1%}
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx1.jpg)
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/cat/xx4.jpg)
