@@ -9,7 +9,77 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/2016/12/06/R-Oracle/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/2018/12/11/R-Format/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2019/04/21/ggplot2-Lines/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2020/07/14/ggplot2-Legend/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2019/07/03/ggplot2-Facet/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2020/07/16/ggplot2-Expression/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2019/11/23/ggplot2-Dual-Axis/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2019/04/21/ggplot2-Color/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2019/11/23/ggplot2-Axis/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2020/10/21/ggplot2-Annotation/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/2016/02/28/ArcGIS-Fishnet/</loc>
     
     <lastmod>2021-05-06</lastmod>
     
@@ -23,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/2016/02/27/ArcGIS%E5%AF%BC%E8%88%AA/</loc>
+    <loc>https://mattzou.com/2019/07/07/ArcGIS-%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/</loc>
     
     <lastmod>2021-05-06</lastmod>
     
@@ -37,65 +107,9 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/2019/04/21/ggplot2-Lines/</loc>
+    <loc>https://mattzou.com/2016/02/27/ArcGIS%E5%AF%BC%E8%88%AA/</loc>
     
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2020/07/14/ggplot2-Legend/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2019/07/03/ggplot2-Facet/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2020/07/16/ggplot2-Expression/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2019/11/23/ggplot2-Dual-Axis/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2019/04/21/ggplot2-Color/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2019/11/23/ggplot2-Axis/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2020/10/21/ggplot2-Annotation/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2019/07/07/ArcGIS-%E4%B8%8A%E4%B8%8B%E8%A7%92%E6%A0%87/</loc>
-    
-    <lastmod>2021-05-05</lastmod>
+    <lastmod>2021-05-06</lastmod>
     
   </url>
   
@@ -121,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/2016/12/06/R-Oracle/</loc>
-    
-    <lastmod>2021-05-01</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://mattzou.com/2021/04/15/R-ggplot2/</loc>
     
     <lastmod>2021-04-28</lastmod>
@@ -136,13 +143,6 @@
   
   <url>
     <loc>https://mattzou.com/about/index.html</loc>
-    
-    <lastmod>2021-04-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2016/02/28/ArcGIS-Fishnet/</loc>
     
     <lastmod>2021-04-23</lastmod>
     
@@ -455,6 +455,20 @@
   
   <url>
     <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/categories/ArcGIS/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/categories/R/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

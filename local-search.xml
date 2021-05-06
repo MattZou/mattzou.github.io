@@ -142,7 +142,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -167,6 +167,12 @@
     <content type="html"><![CDATA[<p>有时需要在图上标注诸如数学公式、上下标等符号，该操作可以通过<code>expression</code>函数完成。</p><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>如果在ggplot2中<code>text</code>参数是一个表达式形式（<code>expression</code>），则该参数将被根据类似TeX的规则对进行格式化输出。<code>expression</code>可用于标题，注释以及x轴和y轴标签<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="Mathematical Annotation in R">[1]</span></a></sup>。</p><p><code>expression</code>代码与输出的对应关系如图<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/expression.jpg/pic"></p><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><h3 id="普通label"><a href="#普通label" class="headerlink" title="普通label"></a>普通label</h3><p>如果只是输出单独符号，则独立使用<strong>expression</strong>即可，如果组合复杂公式或添加文本描述，则在<strong>expression</strong>中使用<strong>paste</strong>进行拼接。</p><div class="code-wrapper"><pre class="line-numbers language-r" data-language="r"><code class="language-r"><span class="token comment"># 全公式</span> labels <span class="token operator">=</span> expression<span class="token punctuation">(</span><span class="token operator">-</span>pi<span class="token punctuation">,</span> <span class="token operator">-</span>pi<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> pi<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> pi<span class="token punctuation">)</span><span class="token comment"># 文本与符号组合</span> xlab <span class="token operator">=</span> expression<span class="token punctuation">(</span>paste<span class="token punctuation">(</span><span class="token string">"Phase Angle "</span><span class="token punctuation">,</span> phi<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></div><h3 id="facet-grid-中的label"><a href="#facet-grid-中的label" class="headerlink" title="facet_grid()中的label"></a><code>facet_grid()</code>中的label</h3><p>需要将label解析方式设置为”label_parsed”<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="Formatting Math Symbols and Expressions in ggplot Labels">[2]</span></a></sup>。</p><div class="code-wrapper"><pre class="line-numbers language-r" data-language="r"><code class="language-r">facet_grid<span class="token punctuation">(</span><span class="token operator">~</span> x<span class="token punctuation">,</span> label <span class="token operator">=</span> <span class="token string">"label_parsed"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><h3 id="annotate-中的label"><a href="#annotate-中的label" class="headerlink" title="annotate()中的label"></a><code>annotate()</code>中的label</h3><p><strong>text</strong>类型的标注，需将parse设置为TRUE。</p><div class="code-wrapper"><pre class="line-numbers language-r" data-language="r"><code class="language-r">annotate<span class="token punctuation">(</span><span class="token string">"text"</span><span class="token punctuation">,</span> label <span class="token operator">=</span> expression<span class="token punctuation">(</span><span class="token ellipsis">...</span><span class="token punctuation">)</span><span class="token punctuation">,</span> parse <span class="token operator">=</span> <span class="token boolean">TRUE</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/plotmath.html">Mathematical Annotation in R</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://www.benjaminackerman.com/post/2019-03-08-equation_labels/">Formatting Math Symbols and Expressions in ggplot Labels</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
     
     
+    <categories>
+      
+      <category>R</category>
+      
+    </categories>
+    
     
     <tags>
       
@@ -190,7 +196,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -296,7 +302,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -323,7 +329,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -350,7 +356,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>ArcGIS</category>
       
     </categories>
     
@@ -377,7 +383,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>ArcGIS</category>
       
     </categories>
     
@@ -404,7 +410,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -431,7 +437,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -458,7 +464,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -512,7 +518,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -537,7 +543,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>ArcGIS</category>
       
     </categories>
     
@@ -620,7 +626,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>R</category>
       
     </categories>
     
@@ -647,7 +653,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>ArcGIS</category>
       
     </categories>
     
@@ -805,7 +811,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>ArcGIS</category>
       
     </categories>
     
@@ -832,7 +838,7 @@
     
     <categories>
       
-      <category>软件使用</category>
+      <category>ArcGIS</category>
       
     </categories>
     
