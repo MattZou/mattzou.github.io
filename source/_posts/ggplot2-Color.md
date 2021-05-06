@@ -2,7 +2,7 @@
 title: ggplot2 颜色配置
 layout: post
 author: MattZou
-updated: 2020-08-31
+updated: 
 date: 2019-04-21 23:17:39
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/274-map-a-variable-to-ggplot2-scatterplot.png/bg
 categories: 软件使用

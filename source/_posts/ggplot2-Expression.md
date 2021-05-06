@@ -2,7 +2,7 @@
 title: ggplot2 使用expression添加公式与数学符号
 layout: post
 author: MattZou
-updated: 2020-07-16
+updated: 
 date: 2020-07-16 10:38:00
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/plotmath 2-1.png/bg
 tags:

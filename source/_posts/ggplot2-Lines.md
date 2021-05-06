@@ -2,7 +2,7 @@
 title: ggplot2 添加拟合线及公式
 layout: post
 author: MattZou
-updated: 2020-08-31
+updated: 
 date: 2019-04-21 23:17:39
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/README-readme-04-1.png/bg
 categories: 软件使用
