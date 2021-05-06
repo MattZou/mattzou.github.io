@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/2018/07/09/ArcGIS-%E8%BD%BD%E5%85%A5%E5%9C%A8%E7%BA%BF%E5%9C%B0%E5%9B%BE/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/2019/07/31/%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90-%E7%A9%BA%E9%97%B4%E7%9B%B8%E5%85%B3%E6%80%A7/</loc>
     
     <lastmod>2021-05-06</lastmod>
@@ -418,6 +425,13 @@
   
   <url>
     <loc>https://mattzou.com/tags/Mapbox/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/BaseMap/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

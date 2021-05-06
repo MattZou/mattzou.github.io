@@ -528,6 +528,33 @@
   
   
   <entry>
+    <title>ArcGIS 载入在线底图</title>
+    <link href="/2018/07/09/ArcGIS-%E8%BD%BD%E5%85%A5%E5%9C%A8%E7%BA%BF%E5%9C%B0%E5%9B%BE/"/>
+    <url>/2018/07/09/ArcGIS-%E8%BD%BD%E5%85%A5%E5%9C%A8%E7%BA%BF%E5%9C%B0%E5%9B%BE/</url>
+    
+    <content type="html"><![CDATA[<p>ArcGIS专题图绘制需载入在线底图，除自带ArcGIS Online的底图外，本文介绍另外两种底图载入方式。</p><h2 id="ArcBruTile"><a href="#ArcBruTile" class="headerlink" title="ArcBruTile"></a>ArcBruTile</h2><p>ArcBruTile是一个独立的底图插件，支持主流在线地图插入，0.8以后版本收费，并支持ArcGIS Pro，可按需<a href="https://bertt.itch.io/arcbrutile">使用</a></p><h2 id="Mapbox"><a href="#Mapbox" class="headerlink" title="Mapbox"></a>Mapbox</h2><p>ArcGIS可以连接 WMTS 服务，因此可以通过Mapbox Studio自定义地图，并发布在线服务，提供给ArcGIS使用。主要步骤如下：</p><ol><li><a href="https://studio.mapbox.com/">Studio</a> 中基于默认地图新建并修改样式</li><li>发布修改后的地图为 WMTS 服务<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/MapboxShare.jpg/pic"></li><li>在ArcGIS中，选择添加WMTS服务<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/ArcGISWMTS.jpg/pic"><br>将发布的url服务地址填入，用户名密码留空<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/WMTS.jpg/pic"></li><li>在ArcGIS中插入底图<br>将服务中的图层拖入Layer Frame即可<br><img src="https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/MapboxWMTS.jpg/pic"></li></ol><p>推荐使用Mapbox底图</p><ul><li>Mapbox地图坐标系统为WGS84，方便转换与匹配</li><li>样式可以随意更改，底图自动同步</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>ArcGIS</tag>
+      
+      <tag>BaseMap</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>路网数据获取</title>
     <link href="/2018/05/06/%E8%B7%AF%E7%BD%91%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%A4%84%E7%90%86/"/>
     <url>/2018/05/06/%E8%B7%AF%E7%BD%91%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%A4%84%E7%90%86/</url>
