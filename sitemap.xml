@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/2016/02/27/ArcGIS%E5%AF%BC%E8%88%AA/</loc>
+    
+    <lastmod>2021-05-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/2018/07/09/ArcGIS-%E8%BD%BD%E5%85%A5%E5%9C%A8%E7%BA%BF%E5%9C%B0%E5%9B%BE/</loc>
     
     <lastmod>2021-05-06</lastmod>
@@ -117,13 +124,6 @@
     <loc>https://mattzou.com/2016/12/06/R-Oracle/</loc>
     
     <lastmod>2021-05-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/2016/02/27/ArcGIS%E5%AF%BC%E8%88%AA/</loc>
-    
-    <lastmod>2021-04-29</lastmod>
     
   </url>
   
@@ -263,6 +263,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/tags/%E8%B7%AF%E7%BD%91/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/tags/Fishnet/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
@@ -277,6 +284,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/tags/BaseMap/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/tags/%E6%98%A0%E5%B0%84%E5%85%B3%E7%B3%BB/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
@@ -284,21 +298,7 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E8%B7%AF%E7%BD%91/</loc>
-    <lastmod>2021-05-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
-    <lastmod>2021-05-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -313,6 +313,13 @@
   
   <url>
     <loc>https://mattzou.com/tags/%E9%81%A5%E6%84%9F/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -354,6 +361,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/tags/ggplot2/</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
@@ -369,13 +383,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/R/</loc>
-    <lastmod>2021-05-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/ggplot2/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -425,13 +432,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/Mapbox/</loc>
-    <lastmod>2021-05-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/BaseMap/</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
