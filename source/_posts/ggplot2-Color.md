@@ -5,7 +5,7 @@ author: MattZou
 updated: 
 date: 2019-04-21 23:17:39
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/274-map-a-variable-to-ggplot2-scatterplot.png/bg
-categories: 软件使用
+categories: R
 tags:
 - R
 - ggplot2

@@ -5,7 +5,8 @@ author: MattZou
 updated: 
 date: 2020-10-21
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/unemp-pres-1.png/bg
-categories: 软件使用
+categories:
+- R
 tags:
 - R
 - ggplot2

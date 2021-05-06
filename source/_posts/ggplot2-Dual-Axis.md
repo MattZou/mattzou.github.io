@@ -5,7 +5,7 @@ author: MattZou
 updated: 
 date: 2019-11-23
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ggplot2/thecode3-1.jpg/bg
-categories: 软件使用
+categories: R
 tags:
 - R
 - ggplot2

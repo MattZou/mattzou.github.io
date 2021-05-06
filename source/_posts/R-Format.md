@@ -5,10 +5,10 @@ author: MattZou
 updated: 
 date: 2018-12-11
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/rc30v1-database-product-listing-all.png/bg
-categories: 软件使用
+categories: R
 tags:
 - R
-description: 主要R中各类数据转换速查
+description: R中各类数据转换速查
 ---
 只提供函数与功能关键字速查，具体用法可自己搜索官方文档，示例比较详尽。
 

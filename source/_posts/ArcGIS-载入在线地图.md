@@ -6,11 +6,12 @@ banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/Mapbox.jpeg/
 author: MattZou
 date: 2018/07/09
 updated: 
-categories: 软件使用
+categories:
+- ArcGIS
 tags: 
 - ArcGIS
 - BaseMap
-description: 
+description: ArcGIS载入在线底图方法介绍
 ---
 
 ArcGIS专题图绘制需载入在线底图，除自带ArcGIS Online的底图外，本文介绍另外两种底图载入方式。

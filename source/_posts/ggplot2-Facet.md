@@ -5,7 +5,7 @@ author: MattZou
 updated: 
 date: 2019-07-03
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/ggplot2-facet.png/bg
-categories: 软件使用
+categories: R
 tags:
 - R
 - ggplot2

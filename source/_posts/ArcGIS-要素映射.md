@@ -5,7 +5,8 @@ index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/features-hero
 author: MattZou
 date: 2016/3/3 10:40:28 
 updated: 2016/3/3 10:40:28 
-categories: 软件使用
+categories:
+- ArcGIS
 tags: 
 - ArcGIS
 - 映射关系

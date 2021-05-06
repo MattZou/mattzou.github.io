@@ -5,7 +5,8 @@ index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/features-hero
 author: MattZou
 date: 2019/07/07
 updated: 
-categories: 软件使用
+categories:
+- ArcGIS
 tags: 
 - ArcGIS
 - 角标

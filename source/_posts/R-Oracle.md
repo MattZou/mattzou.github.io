@@ -4,7 +4,7 @@ author: MattZou
 updated:
 date: 2016-12-06
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/AppDev_oracle-r_detailed.svg
-categories: 软件使用
+categories: R
 tags:
 - R
 - Oracle
