@@ -2,10 +2,10 @@
 title: 城市公交线路获取
 layout: post
 author: MattZou
-updated: 
+updated: 2021-05-07
 date: 2021-05-06 11:55:42
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/Traffic/%E5%8C%97%E4%BA%AC%E6%80%BB%E5%9B%BE.jpg/bg
-categories: 软件使用
+categories: 交通
 tags:
 - 高德API
 description: 基于高德API的城市公交系统基础数据获取与展示

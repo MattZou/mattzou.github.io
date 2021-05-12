@@ -6,7 +6,7 @@ updated:
 author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/CycleLayer2.jpg/bg
 banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/ArcGIS/Spatial-distribution-of-Chinas-OSM-road-network.png/bg
-categories: 软件使用
+categories: 交通
 tags:
 - 路网
 - OSM
