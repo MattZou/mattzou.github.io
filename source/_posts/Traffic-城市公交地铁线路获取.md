@@ -151,13 +151,13 @@ def get_line(key, city_name_pinyin, line_name):
         line_info['station_name'] = station_name
         line_info['station_coords'] = station_coords
         line_info_pd = pd.DataFrame(line_info)
-        line_info_pd[['latitude', 'longitude']] = line_info_pd['station_coords'].str.split(',', 1, expand=True)
+        line_info_pd[['longitude', 'latitude']] = line_info_pd['station_coords'].str.split(',', 1, expand=True)
 
         # 获取线路轨迹
         polyline = re_json['buslines'][0]['polyline']
         line_info_route = {'line_name_short': line_name, 'station_coords': polyline.split(";"), 'line_name': re_json['buslines'][0]['name']}
         route = pd.DataFrame(line_info_route)
-        route[['latitude', 'longitude']] = route['station_coords'].str.split(',', 1, expand=True)
+        route[['longitude', 'latitude']] = route['station_coords'].str.split(',', 1, expand=True)
         return line_info_pd, route
 
     except Exception as e:
@@ -209,16 +209,18 @@ import webbrowser
 
 city_name = 'zhengzhou'
 
-# Point图层
-def csv_to_points():
+# 生成Point图层
+def csv_to_points(to_shp = True):
     df = pd.read_csv('./{}_bus_line_info.csv'.format(city_name))
-    gdf = gpd.GeoDataFrame(df, crs="EPSG:4326", geometry=gpd.points_from_xy(df['latitude'], df['longitude']))
-    gdf.to_file('./{}_bus_line_info.shp'.format(city_name), encoding='utf8')
+    gdf = gpd.GeoDataFrame(df, crs="EPSG:4326", geometry=gpd.points_from_xy(df['longitude'], df['latitude']))
+    if to_shp:
+        gdf_shp = gpd.GeoDataFrame(df, crs="EPSG:4326", geometry=gpd.points_from_xy(df['latitude'], df['longitude']))
+        gdf_shp.to_file('./{}_bus_line_info.shp'.format(city_name), encoding='gbk')
     return gdf
 
 
-# Line图层
-def csv_to_lines():
+# 生成Line图层
+def csv_to_lines(to_shp = True):
     df = pd.read_csv('./{}_bus_line_route.csv'.format(city_name))
     # 按线路名称聚合
     dataGroup = df.groupby('line_name_short')
@@ -229,24 +231,33 @@ def csv_to_lines():
         # 分离出属性信息，取每组的第1行前5列作为数据属性
         attribute_table.append(group.iloc[0,1:4])
         # 把同一组的点打包到一个list中
-        line = LineString([xy for xy in zip(group.latitude, group.longitude)])
+        line = LineString([xy for xy in zip(group.longitude, group.latitude)])
         geometry.append(line)
-
     # 点转线
     gdf = gpd.GeoDataFrame(attribute_table, crs="EPSG:4326", geometry=geometry)
-    # gdf.to_file('./{}_bus_line_route.shp'.format(city_name), encoding='utf8')
+    if to_shp:
+        gdf.to_file('./{}_bus_line_route.shp'.format(city_name), encoding='gbk')
     return gdf
 
 
 # 显示地图
+oints = csv_to_points()
 lines = csv_to_lines()
 
+# 底图
 m = folium.Map([34.8, 113.7], zoom_start=10,  tiles='CartoDB positron')
+
+# 线图层
 folium.Choropleth(
     lines[lines.geometry.length > 0.001],
     line_weight=3,
     line_color='blue'
 ).add_to(m)
+
+# 点图层
+marker_cluster = MarkerCluster().add_to(m)
+for _, r in points.iterrows():
+    folium.Marker([r['latitude'], r['longitude']], popup=r['line_name_short']).add_to(marker_cluster)
 
 output_file = "map.html"
 m.save(output_file)
