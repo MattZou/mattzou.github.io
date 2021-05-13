@@ -171,7 +171,7 @@ if __name__ == "__main__":
     # 读取线路名称文件
     name_pd = pd.read_csv('./{}_bus_name.csv'.format(city_name))
     # AppKey
-    app_key = '949c00083d9692dc5b94fd46de21c73a'
+    app_key = ''
     # 初始化结果集
     line_info_pd_list = []
     route_list = []
