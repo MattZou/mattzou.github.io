@@ -130,3 +130,15 @@ baidu_url_submit:
   host: https://mattzou.com # 在百度站长平台中注册的域名，这个改为你自己的域名
   token: 'guess' # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里，这个默认
+
+## 哔哔功能配置
+## 关注公众号 "黑石哔哔"，发送: //bindCurrentUser:你的APPID,你的MASTERKEY,你的RESTAPI 
+## 可用leancloud国际版，国际版api为 https://appid前八位.api.lncldglobal.com 
+bb:
+ title: Thinking  #页面title
+ appId: 2Hf9atLbzEdyb4sG3TGmEOQs-MdYXbMMI
+ appKey: yrfEc1VYogVOqKIfHcPwlaM2
+ serverURLs: https://2hf9atlb.api.lncldglobal.com #你的api地址
+ limit: 10 #显示条数
+ path: bb #路径名称 例如：https://你的域名/bb
+ content: '👉🏼此说说通过📱手机微信发出，主要记录Matt碎片化思考和动态。📑' #显示在哔哔上方,如不需要注释即可
