@@ -16,7 +16,7 @@ description: 通过高德POI相关API获取加油站信息
 ## 高德API
 参照[文档](https://lbs.amap.com/api/webservice/guide/api/newpoisearch)说明，进行服务key申请。
 
-## 通过关键词检索API
+## 通过关键词检索POI
 ### 载入依赖包
 ``` python
 from urllib.parse import quote
@@ -28,8 +28,8 @@ import folium
 from folium.plugins import MarkerCluster
 ```
 
-通过分页遍历形式获取全部POI。
 ### 关键函数
+通过分页遍历形式获取全部POI。
 ``` python
 # 单页获取pois
 def getpoi(region, keywords, pagenum):
@@ -91,4 +91,3 @@ webbrowser.open(output_file, new=2)
 ```
 ## 效果
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/Traffic/fuelstationmap.jpg/pic)
-
