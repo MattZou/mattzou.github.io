@@ -141,4 +141,4 @@ bb:
  serverURLs: https://2hf9atlb.api.lncldglobal.com #你的api地址
  limit: 10 #显示条数
  path: bb #路径名称 例如：https://你的域名/bb
- content: '👉🏼此说说通过📱手机微信发出，主要记录Matt碎片化思考和动态。📑' #显示在哔哔上方,如不需要注释即可
+ content: '👉🏼此想法通过📱发出，主要记录Matt碎片化思考和动态。📑' #显示在哔哔上方,如不需要注释即可
