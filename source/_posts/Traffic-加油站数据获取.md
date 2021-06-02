@@ -91,3 +91,7 @@ webbrowser.open(output_file, new=2)
 ```
 ## 效果
 ![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/Traffic/fuelstationmap.jpg/pic)
+
+## Reference
+[^1]: [根据城市名和分类名爬取对应的POI数据（基于高德地图）](https://blog.csdn.net/qq_34464926/article/details/85084577)
+[^2]: [Python爬虫高德地图全国各个城市POI并导出表格](https://blog.csdn.net/weixin_42540271/article/details/95206598)
