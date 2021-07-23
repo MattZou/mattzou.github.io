@@ -37,6 +37,10 @@ GREET 模型
 ### WTP
 Well-to-Pump模块主要用于描述燃料生产流程，并计算这一过程中能源消耗与排放。
 
+在WTP panel中打开electricity 
+子分类中 The pathways that are "Distributed" include the transmission and distribution losses to the consumers, the "Non-Distributed" are not accounting for these losses.
+
+
 ## 常用设置项
 
 

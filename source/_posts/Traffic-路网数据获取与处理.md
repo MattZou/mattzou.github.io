@@ -63,6 +63,8 @@ OpenStreetMap作为目前为止最为成功的开放地图计划，是目前主�
      --bounding-box left="119.3692" right="120.9265" top="37.1362" bottom="35.5903" --write-xml file=qd.osm  
      ``` 
    - ArcGIS中通过对应版本[`Arcgis Editor For OSM`](https://www.esri.com/en-us/arcgis/products/arcgis-editor-for-openstreetmap)工具箱打开并转换为shp
+
+3. bbbike[下载](https://extract.bbbike.org/)选定区域下载shp文件。
   
 3. Overpass API
    - [在此](http://www.overpass-api.de/query_form.html)的`Overpass API Query Form`填入查询代码，点击Query保存Interpreter文件
@@ -91,6 +93,8 @@ OpenStreetMap作为目前为止最为成功的开放地图计划，是目前主�
     </osm-script>
     ```
     - ArcGIS中通过对应版本[`Arcgis Editor For OSM`](https://www.esri.com/en-us/arcgis/products/arcgis-editor-for-openstreetmap)工具箱打开并转换为shp[^2]
+
+通过选定区域下载路网数据的方法，获取到的路网容易存在飞线（某些道路会变成一根长度异常的直线），对于这些异常线段，通过特征长度进行筛选并删除即可。
 
 #### 道路类型
 OSM路网下载后，属性表字段fclass可以用于区分道路类型[^3]。
