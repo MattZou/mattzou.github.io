@@ -3,7 +3,7 @@ layout: post
 title: 家用平台主机搭建虚拟化集群
 author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/Kvmbanner-logo2_1.png/bg
-banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/kvm-01.png/b
+banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/kvm-01.png/bg
 date: 2021/08/27
 updated: 2021/08/27
 categories: 虚拟化
