@@ -326,6 +326,13 @@
   </url>
   
   <url>
+    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2021-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -333,7 +340,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <loc>https://mattzou.com/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/</loc>
+    <lastmod>2021-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/Python/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -354,7 +368,7 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/Mendeley/</loc>
+    <loc>https://mattzou.com/tags/Oracle/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -368,7 +382,7 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/Oracle/</loc>
+    <loc>https://mattzou.com/tags/Mendeley/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -383,20 +397,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/Tablespace/</loc>
-    <lastmod>2021-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/</loc>
-    <lastmod>2021-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/Python/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -496,14 +496,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/categories/%E7%9B%AE%E5%BD%95/</loc>
+    <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
+    <loc>https://mattzou.com/categories/%E7%9B%AE%E5%BD%95/</loc>
     <lastmod>2021-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
