@@ -255,7 +255,7 @@ chown qemu:qemu /data
 4. 显示模式：目前采用QXL模式，默认16M显存，在配置xml中改造为128M，重载配置生效，由于手头都是1080p显示器，不知道是否真能支持4K[^5]。
 
 
-## WebVirtCloud管理KVM
+## KVM管理WebVirtCloud
 [WebVirtMgr](http://retspen.github.io/)是之前很很火的的KVM虚拟化Web管理工具，但GitHub上年久失修，并且逐渐迁移到WebVirtCloud，因此考虑部署WebVirtCloud管理服务器用来对集群虚拟机进行集中管理。
 
 ### 简介
@@ -465,7 +465,7 @@ kill->restart->reboot->🤡
 当然，自己折腾乐呵乐呵就行，要不容易上头👨‍🦲
 
 
-## Acknowledgements 
+# Acknowledgements 
    <a href="https://gitee.com/hejiang" class="card-body hover-with-bg" target="_blank" rel="noopener">
      <div class="card-content">
       <div class="link-avatar my-auto">
@@ -480,7 +480,7 @@ kill->restart->reboot->🤡
    </a>
 
 
-## Reference
+# Reference
 
 [^1]:[How to Install KVM on CentOS 8](https://phoenixnap.com/kb/install-kvm-centos)
 [^2]:[How to Install KVM on CentOS/RHEL 8](https://www.tecmint.com/install-kvm-in-centos-8/)
