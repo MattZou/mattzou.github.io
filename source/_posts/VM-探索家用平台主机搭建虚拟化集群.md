@@ -255,10 +255,10 @@ chown qemu:qemu /data
 4. 显示模式：目前采用QXL模式，默认16M显存，在配置xml中改造为128M，重载配置生效，由于手头都是1080p显示器，不知道是否真能支持4K[^5]。
 
 
-## KVM集中管理
+## WebVirtCloud管理KVM
 [WebVirtMgr](http://retspen.github.io/)是之前很很火的的KVM虚拟化Web管理工具，但GitHub上年久失修，并且逐渐迁移到WebVirtCloud，因此考虑部署WebVirtCloud管理服务器用来对集群虚拟机进行集中管理。
 
-### WebVirtCloud简介
+### 简介
 [WebVirtCloud](https://github.com/retspen/webvirtcloud)基于Python 3.x & Django 3.2 LTS构建。
 
 特性包括：
@@ -277,7 +277,7 @@ User can change root password in Instance (Tested only Ubuntu)
 Supports cloud-init datasource interface
 ```
 
-### WebVirtCloud部署
+### 部署
 #### 创建WebVirtCloud服务器
 由于WebVirtCloud需要配置默认Nginx配置，且没有提供Docker部署方式，因此考虑单开一台虚拟机作为管理服务器。创建CentOS8-GUI虚拟机一台。选择GUI版，并附加安装虚拟机组件，一些WebVirtCloud的依赖包附带安装了，配置的时候比较省事。
 
@@ -326,7 +326,7 @@ WEBVIRTCLOUD
 * Finished!
 ```
 
-### Webvirtcloud配置
+### 配置
 #### 添加Webvirtcloud服务器对KVM宿主机的ssh访问
 1. 在Webvirtcloud服务器端，生成ssh key
 ```
