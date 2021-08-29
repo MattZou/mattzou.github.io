@@ -5,16 +5,16 @@ author: MattZou
 index_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/Kvmbanner-logo2_1.png/bg
 banner_img: https://mattblog.oss-cn-beijing.aliyuncs.com/img/index_img/kvm-01.png/bg
 date: 2021/08/27
-updated: 2021/08/27
+updated: 2021/08/29
 categories: 虚拟化
 tags: KVM
 description: 虚拟化小探索
 ---
 
 # 探坑
-最近购置了三台办公用主机，既要兼顾`Windows`平台下办公需求，又要考虑开发`Linux`集群部署，物理机->虚拟化->容器这样的架构从维护和拓展性上都是最佳的选择，因此需要找到一个合适的虚拟化方案。
+最近购置了三台办公用主机，既要兼顾`Windows`平台下办公需求，又要考虑开发`Linux`集群部署，物理机->虚拟化->容器这样的架构从维护和拓展性上都是最佳的选择，虚拟化是一切服务的基础，因此需要找到一个合适的虚拟化方案。
 
-虚拟化是一切服务的基础，找了一圈，开源，主流，易上手的虚拟化方案主要有两种：物理机`Win`环境，用`wsl`或者`VirtualBox`跑`CentOS`；另一种是物理机`CentOS`，用`KVM`虚拟`Win`以及`Linux`。前一种方案，在单机上尝试过，`wsl/wsl2`各有优劣，一切看微软大爷眼色行事，更加适用于个人或小组研究，扩展性上估计一堆坑，所以绕过，考虑在`Linux`下用`KVM`的[解决方案](https://www.redhat.com/zh/topics/virtualization/what-is-KVM)。
+找了一圈，开源，主流，易上手的虚拟化方案主要有两种：物理机`Win`环境，用`wsl`或者`VirtualBox`跑`CentOS`；另一种是物理机`CentOS`，用`KVM`虚拟`Win`以及`Linux`。前一种方案，在单机上尝试过，`wsl/wsl2`各有优劣，一切看微软大爷眼色行事，更加适用于个人或小组研究，扩展性上估计一堆坑，所以绕过，考虑在`Linux`下用`KVM`的[解决方案](https://www.redhat.com/zh/topics/virtualization/what-is-KVM)。
 
 单机上架设多个VM，使用`virt-manager`可以很方便进行管理，对于集群`KVM`管理，常用的是`Proxmox`和`WebVirtMgr`，都比较容易上手。但看着`Proxmox`官网更加炫酷，安装方便，集群维护、VM迁移等功能齐备，而且网上保姆教程一大堆，用`Ventory`还能自动部署，就选它了。
 
@@ -35,7 +35,7 @@ description: 虚拟化小探索
 | SSD 	| M.2 500g 	|
 | HDD 	| 5400RPM 2T 	|
 
-装机就开始坑了，CPU风扇方向装反，拆了装装了拆===好歹是开机亮灯没问题。先装了个Win做稳定性测试，FS140风冷压不带k的i7还是没问题，不过反复拆装可能导致一个硅脂没涂好，两台双烤差了5℃，我都怕没撕膜直接怼上了。B560主板支持内存超频，镁光C9BJZ颗粒XMP上3600[轻松容易](https://zhuanlan.zhihu.com/p/369653535)，就是3600再往上，[内存分频](https://www.bilibili.com/read/cv10871233/?ivk_sa=1024320u)代价太大，就不折腾了。
+装机就开始坑了，CPU风扇方向装反，拆了装装了拆===好歹是开机亮灯没问题。先装了个Win做稳定性测试，FS140风冷压不带k的i7还是没问题，不过反复拆装可能导致一个硅脂没涂好，两台双烤差了5℃，我都怕没撕膜直接怼上了。B560主板支持内存超频，镁光C9BJZ颗粒XMP上3600[轻松容易](https://zhuanlan.zhihu.com/p/369653535)，就是3600再往上，[内存分频](https://www.bilibili.com/video/BV1AM4y157ut)代价太大，就不折腾了。
 
 ## Proxmox安装
 Proxmox VE最新7.0版本是基于Debian 11，安装方式提供iso直装，批量部署推荐使用Ventory（真是装机神器，iso一放，脚本一配置就可以喝茶去了）。
@@ -250,9 +250,110 @@ chown qemu:qemu /data
 
 ### KVM性能优化
 1. 存储主要是磁盘模式（VirtIO）
-2. CPU：CPU较新的型号KVM里没有提供对应模板，因此在cpu型号设置中手动输入`host-passthrough`可以向VM公开主机CPU的全部功能，默认设置对于11700处理，在虚拟机中cpuz查看，自动识别仅为10代服务器处理器，且锁定频率为基频。设置直通后，可以识别为正确型号，且睿频生效[^4]。
-3. 显示性能，由于11带处理器集成显卡有较大升级，后期准备研究一下`Intel GVT-g`显卡直通技术，提升虚拟机显示性能，视频可以看起来了📺
+2. CPU：CPU较新的型号KVM里没有提供对应模板，因此在cpu型号设置中手动输入`host-passthrough`可以向VM公开主机CPU的全部功能，默认设置下11700处理在虚拟机中`cpuz`自动识别为10代服务器处理器，且锁定频率为基频。设置直通后，可以识别为正确型号，且睿频生效[^4]。
+3. 显示性能，由于11代处理器集成显卡有较大升级，后期准备研究一下`Intel GVT-g`显卡直通技术，提升虚拟机显示性能，视频可以看起来了📺
 4. 显示模式：目前采用QXL模式，默认16M显存，在配置xml中改造为128M，重载配置生效，由于手头都是1080p显示器，不知道是否真能支持4K[^5]。
+
+
+## KVM集中管理
+[WebVirtMgr](http://retspen.github.io/)是之前很很火的的KVM虚拟化Web管理工具，但GitHub上年久失修，并且逐渐迁移到WebVirtCloud，因此考虑部署WebVirtCloud管理服务器用来对集群虚拟机进行集中管理。
+
+### WebVirtCloud简介
+[WebVirtCloud](https://github.com/retspen/webvirtcloud)基于Python 3.x & Django 3.2 LTS构建。
+
+特性包括：
+```
+QEMU/KVM Hypervisor Management
+QEMU/KVM Instance Management - Create, Delete, Update
+Hypervisor & Instance web based stats
+Manage Multiple QEMU/KVM Hypervisor
+Manage Hypervisor Datastore pools
+Manage Hypervisor Networks
+Instance Console Access with Browsers
+Libvirt API based web management UI
+User Based Authorization and Authentication
+User can add SSH public key to root in Instance (Tested only Ubuntu)
+User can change root password in Instance (Tested only Ubuntu)
+Supports cloud-init datasource interface
+```
+
+### WebVirtCloud部署
+#### 创建WebVirtCloud服务器
+由于WebVirtCloud需要配置默认Nginx配置，且没有提供Docker部署方式，因此考虑单开一台虚拟机作为管理服务器。创建CentOS8-GUI虚拟机一台。选择GUI版，并附加安装虚拟机组件，一些WebVirtCloud的依赖包附带安装了，配置的时候比较省事。
+
+#### WebVirtCloud快速安装模式
+1. 进入快速安装
+网好
+```
+wget https://raw.githubusercontent.com/retspen/webvirtcloud/master/install.sh
+chmod 744 install.sh
+# run with sudo or root user
+./install.sh
+```
+网不好，[下载](https://github.com/retspen/webvirtcloud/archive/refs/heads/master.zip)包，解压，然后
+```
+chmod 744 install.sh
+# run with sudo or root user
+./install.sh
+```
+2. 快速安装模式里配置端口，建议默认，后期可以配置端口转发[^6]。
+以下是默认配置和需要确认的部分
+```
+WEBVIRTCLOUD
+
+  Welcome to Webvirtcloud Installer for CentOS, Fedora, Debian and Ubuntu!
+
+  The installer has detected centos version 8.
+  Q. Do you want to configure fqdn for Nginx? (y/n) y
+
+  Q. What is the FQDN of your server? ({serverip_or_hostname}):
+     Setting to {serverip_or_hostname}
+
+  Q. Do you want to change NOVNC service port number?(Default: 6080)
+     Setting novnc service port 6080
+
+  Q. Do you want to change NOVNC public port number for reverse proxy(e.g: 80 or 443)?(Default: 6080)
+      Setting novnc public port 6080
+
+  Q. Do you want to change NOVNC host listen ip?(Default: 0.0.0.0)
+      Setting novnc host ip 0.0.0.0
+```
+确认后会自动执行安装，如果没有错误，会出现
+```
+***Open http://{hostname} to login to webvirtcloud.***
+
+* Cleaning up...
+* Finished!
+```
+
+### Webvirtcloud配置
+#### 添加Webvirtcloud服务器对KVM宿主机的ssh访问
+1. 在Webvirtcloud服务器端，生成ssh key
+```
+sudo -u nginx ssh-keygen
+ls -lh /var/lib/nginx/.ssh/
+```
+2. 传输到KVM宿主机
+```
+sudo -u nginx ssh-copy-id root@compute1
+```
+3. 测试nginx用户对KVM宿主机的访问连接
+```
+ virsh --connect qemu+ssh://root@compute1/system list --all
+```
+如果可以看到虚拟机列表，则表明配置成功。
+每次新增KVM宿主机节点，按以上步骤实现一遍即可。
+
+#### 访问Web Dashboard
+在http://{serverip_or_hostname}可进入管理登录页面，默认admin/admin。进入后可以修改密码等配置。
+
+在计算节点（Computer）面板，添加ssh连接到宿主机。FQDN/IP,Login等项目按照刚才配置的ssh访问项目填写即可。
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/IT/KVM/hosts.png)
+添加后状态显示成功即可，返回实例（Instance）面板对宿主机下挂虚拟机进行管理。
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/IT/KVM/grouped.png)
+实例详情
+![](https://mattblog.oss-cn-beijing.aliyuncs.com/img/IT/KVM/instance.png)
+
 
 ## 内网穿透Frp
 服务器配置好，外网如果要访问，且没有固定IP（其实是💴不够），需要内网穿透方案。应急可以使用花生壳的免费版，但流量速度有限。刚好有台阿里云ECS，可以作为跳板，进行内网穿透。
@@ -265,9 +366,7 @@ wget https://github.com/fatedier/frp/releases/download/v0.32.1/frp_0.32.1_linux_
 tar -zxvf  frp_0.32.1_linux_amd64.tar.gz
 ```
 2. 编辑`frps.ini`文件
-
 配置server和client通讯端口，这里设置为7000
-
 配置frp控制面板，可以监控端口状态
 ``` ini
 [common]
@@ -297,7 +396,6 @@ ExecStart=/root/frp_0.32.1_linux_amd64/frps -c /root/frp_0.32.1_linux_amd64/frps
 [Install]
 WantedBy=multi-user.target
 ```
-
 ```
 # 启动测试
 systemctl start frps.service
@@ -325,14 +423,10 @@ local_ip = 127.0.0.1
 local_port = 22
 remote_port = 6000 
 ```
-3. windows下设置为系统服务，保证自启动
-
+1. windows下设置为系统服务，保证自启动
 用winsw将frp注册为系统服务
-
 下载：https://github.com/kohsuke/winsw/releases
-
 改名为winsw.exe，放入frp目录
-
 在此目录下，新建`utf8`编码的xml，命名`winsw.xml`,内容为
 ``` xml
 <service>
@@ -359,6 +453,7 @@ winsw start
 
 ### 更多
 更多高级设置可参考[文档](https://gofrp.org/docs/)。其实主要就是在两端配置frps和frpc配置文件。
+
 
 
 # 感想
@@ -392,3 +487,4 @@ kill->restart->reboot->🤡
 [^3]:[KVM虚拟机迁移（冷迁移、热迁移）](https://www.wanhebin.com/devops/kvm/893.html)
 [^4]:[在virt-manager中使用CPU型号主机直通](https://blog.csdn.net/allway2/article/details/102940533)
 [^5]:[qemu+spice的QXL配置](https://www.icode9.com/content-4-960089.html)
+[^6]:[Install WebVirtCloud KVM Management on CentOS 8 / Stream 8](https://computingforgeeks.com/install-webvirtcloud-kvm-management-on-centos/)
