@@ -7,9 +7,9 @@ $ vim &#x2F;etc&#x2F;X11&#x2F;xorg.conf # update Driver &quot;amdgpu&quot;-&gt; 
 $ startx
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><p>一番折腾后总算看到安装界面，但是上面只有几个大字<br><strong><code>No Network Interface Found</code></strong><br>事情变得微妙起来，新平台出问题，大概率是驱动跟不上。既然是网络问题，于是带上网卡关键词<a target="_blank" rel="noopener" href="https://forum.proxmox.com/threads/no-network-interface-found-for-rtl8125b.72378/">No Network Interface Found for RTL8125B</a>，思路豁然开朗。<br>其中有人通过一个复杂的网卡驱动安装解决了。</p><h3 id="安装网卡驱动"><a href="#安装网卡驱动" class="headerlink" title="安装网卡驱动"></a>安装网卡驱动</h3><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">1) 1 usb with proxmox, 1 usb with driver package
 2) Boot into proxmox installer and Select debug mode installation
-3)Press ctrl+d once for it to proceed
-4)plug in android phone after enabling usb tether on the phone
-5)type in ‘ ip addr show ‘ And note down the interface name for the usb tether, mine was enp0s something something
+3) Press ctrl+d once for it to proceed
+4) plug in android phone after enabling usb tether on the phone
+5) type in ‘ ip addr show ‘ And note down the interface name for the usb tether, mine was enp0s something something
 6) type in ‘ ip link set enp0s up’ #replace enp0s with your own interface name
 7) type in dhclient enp0s #replace enp0s with your own interface name
 8) test connectivity by using ping, ‘ping 1.1.1.1’
