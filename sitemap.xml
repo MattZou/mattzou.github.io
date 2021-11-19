@@ -305,7 +305,7 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/BaseMap/</loc>
+    <loc>https://mattzou.com/tags/%E8%A7%92%E6%A0%87/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -319,7 +319,7 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E8%A7%92%E6%A0%87/</loc>
+    <loc>https://mattzou.com/tags/BaseMap/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -327,20 +327,6 @@
   
   <url>
     <loc>https://mattzou.com/tags/%E8%B7%AF%E7%BD%91/</loc>
-    <lastmod>2021-11-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
-    <lastmod>2021-11-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -361,14 +347,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/Mendeley/</loc>
+    <loc>https://mattzou.com/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/%E7%8C%AB/</loc>
+    <loc>https://mattzou.com/tags/%E7%8E%AF%E5%A2%83%E6%97%A5/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -389,14 +375,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/Tablespace/</loc>
+    <loc>https://mattzou.com/tags/Mendeley/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/tags/R/</loc>
+    <loc>https://mattzou.com/tags/%E7%8C%AB/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -411,6 +397,20 @@
   
   <url>
     <loc>https://mattzou.com/tags/Python/</loc>
+    <lastmod>2021-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/R/</loc>
+    <lastmod>2021-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mattzou.com/tags/Tablespace/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -517,14 +517,14 @@
   </url>
   
   <url>
-    <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
+    <loc>https://mattzou.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://mattzou.com/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://mattzou.com/categories/%E7%8E%AF%E4%BF%9D/</loc>
     <lastmod>2021-11-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
