@@ -66,9 +66,9 @@ $ startx
 ```
 1) 1 usb with proxmox, 1 usb with driver package
 2) Boot into proxmox installer and Select debug mode installation
-3)Press ctrl+d once for it to proceed
-4)plug in android phone after enabling usb tether on the phone
-5)type in ‘ ip addr show ‘ And note down the interface name for the usb tether, mine was enp0s something something
+3) Press ctrl+d once for it to proceed
+4) plug in android phone after enabling usb tether on the phone
+5) type in ‘ ip addr show ‘ And note down the interface name for the usb tether, mine was enp0s something something
 6) type in ‘ ip link set enp0s up’ #replace enp0s with your own interface name
 7) type in dhclient enp0s #replace enp0s with your own interface name
 8) test connectivity by using ping, ‘ping 1.1.1.1’
@@ -330,16 +330,17 @@ WEBVIRTCLOUD
 #### 添加Webvirtcloud服务器对KVM宿主机的ssh访问
 1. 在Webvirtcloud服务器端，生成ssh key
 ```
-sudo -u nginx ssh-keygen
+su - nginx -s /bin/bash
+ssh-keygen -t rsa -P ''
 ls -lh /var/lib/nginx/.ssh/
 ```
 2. 传输到KVM宿主机
 ```
-sudo -u nginx ssh-copy-id root@compute1
+ssh-copy-id root@compute1
 ```
 3. 测试nginx用户对KVM宿主机的访问连接
 ```
- virsh --connect qemu+ssh://root@compute1/system list --all
+virsh --connect qemu+ssh://root@compute1/system list --all
 ```
 如果可以看到虚拟机列表，则表明配置成功。
 每次新增KVM宿主机节点，按以上步骤实现一遍即可。

@@ -241,7 +241,7 @@ def csv_to_lines(to_shp = True):
 
 
 # 显示地图
-oints = csv_to_points()
+points = csv_to_points()
 lines = csv_to_lines()
 
 # 底图
